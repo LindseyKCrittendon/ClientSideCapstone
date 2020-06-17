@@ -1,9 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Shack from './components/Shack';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from "react-router-dom"
+import Shack from './components/Shack'
 
 ReactDOM.render(
-<Shack />, 
-document.getElementById('root'));
+  <Router>
+    <Shack />
+  </Router>
+  , document.getElementById('root'))
 
 
