@@ -1,0 +1,81 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "SHACK",
+            "username": "UFC1",
+            "password": "123"
+        }
+    ],
+    "updates": [
+        {
+            "id": 1,
+            "truckId": 1,
+            "message": "The truck will serve grilled cheeses, fresh fruit, and your choice of milk, juice, or water.",
+            "date": "06/19/2020",
+            "neighborhoodId": 1
+        },
+        {
+            "date": "06/19/2020",
+            "id": 2,
+            "message": "We will be in the parking lot of First Baptist on MacCorkle Ave. from 2-4pm today.",
+            "neighborhoodId": 2,
+            "truckId": 1
+        }
+    ],
+    "neighborhoods": [
+        {
+            "id": 1,
+            "name": "Downtown Charleston"
+        },
+        {
+            "id": 2,
+            "name": "Switzer Center"
+        },
+        {
+            "id": 3,
+            "name": "West Side"
+        },
+        {
+            "name": "Kanawha City",
+            "id": 4
+        },
+        {
+            "id": 5,
+            "name": "South Park Village"
+        }
+    ],
+    "kids": [
+        {
+            "id": 1,
+            "caregiver": "Jane Doe",
+            "age": "7",
+            "neighborhoodId": 3,
+            "served": false
+            
+        },
+        {
+            "id": 2,
+            "neighborhoodId": 3,
+            "age": "4",
+            "caregiver": "Jane Doe",
+            "served": false
+        },
+        {
+            "served": false,
+            "caregiver": "John Smith",
+            "age": "15",
+            "neighborhoodId": 2,
+            "id": 3
+        },
+        {
+            "id": 4,
+            "neighborhoodId": 4,
+            "age": "2",
+            "caregiver": "Jade Adkins",
+            "served": false
+        }
+    ]
+
+    
+}
