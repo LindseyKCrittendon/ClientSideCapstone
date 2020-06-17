@@ -1,9 +1,9 @@
 import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './home/Home'
-import KidCard from './kid/KidCard'
+import KidList from './kid/KidList'
 import FormCard from './form/FormCard'
-import UpdateCard from './update/UpdateCard'
+import UpdateList from './update/UpdateList'
 
 
 
@@ -19,10 +19,10 @@ class ApplicationViews extends Component {
           return <FormCard />
         }} />
          <Route path="/updates" render={(props) => {
-          return <UpdateCard />
+          return <UpdateList />
         }} />
          <Route path="/kids" render={(props) => {
-          return <KidCard />
+          return <KidList />
         }} />
       </React.Fragment>
     )

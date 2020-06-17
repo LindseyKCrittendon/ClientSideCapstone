@@ -21,13 +21,15 @@ import React, { Component } from 'react'
 
     render(){
     
-
+  
         return(
-            <div className="container-cards">
-                {this.state.kids.map(kid => <KidCard />)}
-            </div>
+          <div className="container-cards">
+            {this.state.kids.map(kid =>
+              <KidCard key={kid.id} kid={kid} />
+            )}
+          </div>
         )
-    }
+      }
 }
 
 export default KidList

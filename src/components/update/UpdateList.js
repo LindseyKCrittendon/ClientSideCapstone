@@ -22,13 +22,15 @@ componentDidMount(){
 
 render(){
     
-
+  
     return(
-        <div className="container-cards">
-            {this.state.updates.map(update => <UpdateCard />)}
-        </div>
+      <div className="container-cards">
+        {this.state.updates.map(update =>
+          <UpdateCard key={update.id} update={update} />
+        )}
+      </div>
     )
-}
+  }
 }
 
 export default UpdateList
