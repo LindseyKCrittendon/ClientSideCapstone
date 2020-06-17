@@ -1,0 +1,17 @@
+.address{
+    text-align: center;
+}
+
+.description{
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.description-container{
+    border: groove 2px silver;
+    align-items: center;
+    padding: 2em;
+    width: 50%;
+    margin-top: 5em;
+    margin-left: 22em;
+}
