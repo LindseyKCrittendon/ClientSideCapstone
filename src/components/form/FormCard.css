@@ -1,0 +1,8 @@
+.card{
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    border: groove 2px silver;
+    background-color: lightgrey;
+}
+
