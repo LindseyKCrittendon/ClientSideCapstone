@@ -1,12 +1,26 @@
 import React, { Component } from 'react'
     import KidCard from './KidCard'
     import KidManager from '../../modules/KidManager'
+    // import NeighborhoodManager from '../../modules/NeighborhoodManager'
+    // TODO:  GET NEIGHBORHOOD NAME TO PRINT WITH THE CORRECT CHILD
 
     class KidList extends Component {
         //define what this component needs to render
         state = {
             kids: [],
         }
+
+        deleteKid = id => {
+            KidManager.delete(id)
+            .then(() => {
+              KidManager.getAll()
+              .then((newKids) => {
+                this.setState({
+                    kids: newKids
+                })
+              })
+            })
+          }
 
     componentDidMount(){
         
@@ -23,9 +37,13 @@ import React, { Component } from 'react'
     
   
         return(
-          <div className="container-cards">
+            <div className="container-cards">
             {this.state.kids.map(kid =>
-              <KidCard key={kid.id} kid={kid} />
+              <KidCard
+                key={kid.id}
+                kid={kid}
+                deleteKid={this.deleteKid}
+              />
             )}
           </div>
         )

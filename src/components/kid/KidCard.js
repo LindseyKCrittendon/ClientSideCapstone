@@ -15,6 +15,7 @@ class KidCard extends Component {
          <input type="checkbox" name="checkbox"></input>
          </label>
           </form>
+          <button type="button" onClick={() => this.props.deleteKid(this.props.kid.id)}>Delete</button>
         </div>
       </div>
     );
