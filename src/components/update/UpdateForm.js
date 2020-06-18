@@ -62,7 +62,7 @@ class UpdateForm extends Component {
                         />
                         <label htmlFor="message">Message</label>
                     </div>
-                    <div className="alignRight">
+                    <div className="alignRight draw">
                         <button
                         type="button"
                         disabled={this.state.loadingStatus}

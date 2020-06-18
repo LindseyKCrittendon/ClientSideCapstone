@@ -3,7 +3,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
-    background: aliceblue;
+    background: #6b5b95;
   }
   
   .card-content h3 {
@@ -23,7 +23,7 @@
   }
   
   .card button {
-    background-color: cornflowerblue;
+    background-color: #f45e61;
     border: none;
     color: cornsilk;
     text-align: center;
@@ -37,5 +37,64 @@
   }
   
   .card button:hover {
-    background-color: darkblue;
+    background-color: #6b5b95;
+  }
+  /* code pen for button draw */
+
+  button {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em 2em;
+    box-shadow: inset 0 0 0 2px #f45e61;
+    color: #f45e61;
+    font-size: inherit;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+  }
+  button::before, button::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .draw {
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+  }
+  .draw::before, .draw::after {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
+  .draw::before {
+    top: 0;
+    left: 0;
+  }
+  .draw::after {
+    bottom: 0;
+    right: 0;
+  }
+  .draw:hover {
+    color: #60daaa;
+  }
+  .draw:hover::before, .draw:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+  .draw:hover::before {
+    border-top-color: #60daaa;
+    border-right-color: #60daaa;
+    -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  }
+  .draw:hover::after {
+    border-bottom-color: #60daaa;
+    border-left-color: #60daaa;
+    -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
   }

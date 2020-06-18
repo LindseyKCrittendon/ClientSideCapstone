@@ -3,12 +3,12 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import "./FormCard.css"
 
-//TODO:: FIGURE OUT HOW TO POST FORM INPUTS WITHOUT PRINTING
+//TODO:: POST NEW CHILDREN WITH CORRECT NEIGHBORHOOD ID, SAVE, AND SHOW THE FORM AGAIN.
 
 class FormCard extends Component {
     render() {
       return (
-        <div className="card">
+        <div className="card" id="meal-form">
           <div className="card-content">
             <h3>Meal Request</h3>
             <p>Please fill out our form to request a meal</p>
@@ -24,15 +24,13 @@ class FormCard extends Component {
   <Form.Group controlId="exampleForm.ControlSelect1">
     <Form.Label>Neighborhood</Form.Label>
     <Form.Control as="select">
-      <option>Downtown Charleston</option>
-      <option>Switzer Center</option>
-      <option>West Side</option>
-      <option>Kanawha City</option>
-      <option>South Park Village</option>
+      {this.props.neighborhoods.map(neighborhood =>
+        <option value={neighborhood.id}>{neighborhood.name}</option>
+        )}
     </Form.Control>
   </Form.Group>
 </Form>
-<Button variant="primary" size="sm">
+<Button className="draw" variant="primary" size="sm">
       Submit
     </Button>
           </div>

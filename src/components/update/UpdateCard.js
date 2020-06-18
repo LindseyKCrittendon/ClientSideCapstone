@@ -8,7 +8,7 @@ class UpdateCard extends Component {
           <h3>Update: <span className="card-update">{this.props.update.message}</span></h3>
           <p>Date: {this.props.update.date}</p>
           <p>Neighborhood: {this.props.update.neighborhoodId}</p>
-          <button type="button" onClick={() => this.props.deleteUpdate(this.props.update.id)}>Delete</button>
+          <button type="button" className="draw" onClick={() => this.props.deleteUpdate(this.props.update.id)}>Delete</button>
         </div>
       </div>
     );

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import the components we will need
 import UpdateCard from './UpdateCard'
 import UpdateManager from '../../modules/UpdateManager'
+import './UpdateList.css'
 //TODO:  GET CORRECT NEIGHBORHOOD NAME TO PRINT WITH UPDATE
 
 class UpdateList extends Component {
@@ -40,7 +41,7 @@ class UpdateList extends Component {
             <>
                 <section className="section-content">
                     <button type="button"
-                        className="btn"
+                        className="btn draw"
                         onClick={() => { this.props.history.push("/updates/new") }}>
                         New Update
                     </button>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import KidCard from './KidCard'
 import KidManager from '../../modules/KidManager'
+import './KidList.css'
 // import NeighborhoodManager from '../../modules/NeighborhoodManager'
 // TODO:  GET NEIGHBORHOOD NAME TO PRINT WITH THE CORRECT CHILD
 
@@ -40,7 +41,7 @@ class KidList extends Component {
             <>
                 <section className="section-content">
                     <button type="button"
-                        className="btn"
+                        className="btn draw"
                         onClick={() => { this.props.history.push("/kids/new") }}>
                         Add Kid
                     </button>

@@ -8,12 +8,13 @@
 }
 
 .description-container{
-    border: groove 2px silver;
+    border: groove 2px #ff96c5;
     align-items: center;
     padding: 2em;
     width: 50%;
     margin-top: 5em;
     margin-left: 22em;
+    border-radius: 30px;
 }
 button{
     margin: 4px;

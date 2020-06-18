@@ -1,24 +1,3 @@
-.card{
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    border: groove 2px silver;
-    background-color: lightgrey;
-  
-    
-}
-.card-content{
-    width: 12vw;
-    padding-left: 6em;
-}
-
-#meal-form{
-    margin-top: 8em;
-    margin-left: 25%;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 button {
     background: none;
     border: 0;
