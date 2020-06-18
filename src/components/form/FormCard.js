@@ -3,6 +3,8 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import "./FormCard.css"
 
+//TODO:: FIGURE OUT HOW TO POST FORM INPUTS WITHOUT PRINTING
+
 class FormCard extends Component {
     render() {
       return (

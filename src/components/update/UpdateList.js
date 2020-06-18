@@ -12,42 +12,51 @@ class UpdateList extends Component {
 
     deleteUpdate = id => {
         UpdateManager.delete(id)
-        .then(() => {
-          UpdateManager.getAll()
-          .then((newUpdates) => {
-            this.setState({
-                updates: newUpdates
+            .then(() => {
+                UpdateManager.getAll()
+                    .then((newUpdates) => {
+                        this.setState({
+                            updates: newUpdates
+                        })
+                    })
             })
-          })
-        })
-      }
+    }
 
-componentDidMount(){
-    
-    //getAll from UpdateManager and hang on to that data; put it in state
-    UpdateManager.getAll()
-    .then((updates) => {
-        this.setState({
-            updates: updates
-        })
-    })
-}
+    componentDidMount() {
 
-render(){
-    
-  
-    return(
-        <div className="container-cards">
-        {this.state.updates.map(update =>
-          <UpdateCard
-            key={update.id}
-            update={update}
-            deleteUpdate={this.deleteUpdate}
-          />
-        )}
-      </div>
-    )
-  }
+        //getAll from UpdateManager and hang on to that data; put it in state
+        UpdateManager.getAll()
+            .then((updates) => {
+                this.setState({
+                    updates: updates
+                })
+            })
+    }
+
+    render() {
+
+
+        return (
+            <>
+                <section className="section-content">
+                    <button type="button"
+                        className="btn"
+                        onClick={() => { this.props.history.push("/updates/new") }}>
+                        New Update
+                    </button>
+                </section>
+                <div className="container-cards">
+                    {this.state.updates.map(update =>
+                        <UpdateCard
+                            key={update.id}
+                            update={update}
+                            deleteUpdate={this.deleteUpdate}
+                        />
+                    )}
+                </div>
+            </>
+        )
+    }
 }
 
 export default UpdateList

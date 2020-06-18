@@ -8,9 +8,18 @@ export default {
     return fetch(`${remoteURL}/updates`).then(result => result.json())
   },
   delete(id) {
-    return fetch(`http://localhost:8000/kids/${id}`, {
+    return fetch(`http://localhost:8000/updates/${id}`, {
         method: "DELETE"
     })
     .then(result => result.json())
-  }
+  },
+  post(newUpdate) {
+    return fetch(`${remoteURL}/updates`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newUpdate)
+    }).then(data => data.json())
+}
 }
