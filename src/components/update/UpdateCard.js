@@ -7,7 +7,7 @@ class UpdateCard extends Component {
         <div className="card-content">
           <h3>Update: <span className="card-update">{this.props.update.message}</span></h3>
           <p>Date: {this.props.update.date}</p>
-          <p>Neighborhood: {this.props.update.neighborhoodId}</p>
+          <p>Neighborhood: {this.props.update.neighborhood.name}</p>
           <button type="button" className="draw" onClick={() => this.props.deleteUpdate(this.props.update.id)}>Delete</button>
         </div>
       </div>

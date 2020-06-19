@@ -5,7 +5,7 @@ export default {
     return fetch(`${remoteURL}/updates/${id}`).then(result => result.json())
   },
   getAll() {
-    return fetch(`${remoteURL}/updates`).then(result => result.json())
+    return fetch(`${remoteURL}/updates?_expand=neighborhood`).then(result => result.json())
   },
   delete(id) {
     return fetch(`http://localhost:8000/updates/${id}`, {
