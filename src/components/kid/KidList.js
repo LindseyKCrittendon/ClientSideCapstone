@@ -3,7 +3,7 @@ import KidCard from './KidCard'
 import KidManager from '../../modules/KidManager'
 import './KidList.css'
 // import NeighborhoodManager from '../../modules/NeighborhoodManager'
-// TODO:  GET NEIGHBORHOOD NAME TO PRINT WITH THE CORRECT CHILD
+// TODO:  GET NEW KID FORM TO POST AND REPRINT CORRECTLY
 
 class KidList extends Component {
     //define what this component needs to render

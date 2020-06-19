@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import UpdateCard from './UpdateCard'
 import UpdateManager from '../../modules/UpdateManager'
 import './UpdateList.css'
-//TODO:  GET CORRECT NEIGHBORHOOD NAME TO PRINT WITH UPDATE
+//TODO:  GET NEW UPDATE TO POST CORRECTLY AND REPRINT
 
 class UpdateList extends Component {
     //define what this component needs to render
