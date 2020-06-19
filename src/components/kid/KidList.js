@@ -54,6 +54,7 @@ class KidList extends Component {
                             deleteKid={this.deleteKid}
                         />
                     )}
+                    
                 </div>
             </>
         )
