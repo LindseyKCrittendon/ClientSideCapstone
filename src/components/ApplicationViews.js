@@ -6,6 +6,7 @@ import FormList from './form/FormList'
 import UpdateList from './update/UpdateList'
 import KidForm from './kid/KidForm'
 import UpdateForm from './update/UpdateForm'
+import KidEditForm from './kid/KidEditForm'
 
 
 
@@ -32,6 +33,9 @@ class ApplicationViews extends Component {
                 <Route path="/kids/new" render={(props) => {
                     return <KidForm {...props} />
                 }} />
+                <Route path="/kids/:kidId(\d+)/edit" render={props => {
+                    return <KidEditForm {...props} />
+                }}/>
             </React.Fragment>
         )
     }

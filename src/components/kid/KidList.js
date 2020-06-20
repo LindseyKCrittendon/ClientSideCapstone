@@ -52,6 +52,7 @@ class KidList extends Component {
                             key={kid.id}
                             kid={kid}
                             deleteKid={this.deleteKid}
+                            {...this.props}
                         />
                     )}
                     

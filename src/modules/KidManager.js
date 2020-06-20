@@ -21,5 +21,14 @@ export default {
         },
         body: JSON.stringify(newKid)
     }).then(data => data.json())
+},
+update(editedKid) {
+  return fetch(`${remoteURL}/kids/${editedKid.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(editedKid)
+  }).then(data => data.json());
 }
 }
