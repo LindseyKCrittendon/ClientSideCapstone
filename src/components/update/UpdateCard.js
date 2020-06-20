@@ -9,7 +9,9 @@ class UpdateCard extends Component {
           <p>Date: {this.props.update.date}</p>
           <p>Neighborhood: {this.props.update.neighborhood.name}</p>
           <button type="button" className="draw" onClick={() => this.props.deleteUpdate(this.props.update.id)}>Delete</button>
-        </div>
+          <button type="button"
+          onClick={() => {this.props.history.push(`/updates/${this.props.update.id}/edit`)}}>Edit</button>
+          </div>
       </div>
     );
   }
