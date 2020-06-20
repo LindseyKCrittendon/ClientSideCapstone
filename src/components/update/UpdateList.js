@@ -52,6 +52,7 @@ class UpdateList extends Component {
                             key={update.id}
                             update={update}
                             deleteUpdate={this.deleteUpdate}
+                            {...this.props}
                         />
                     )}
                 </div>
