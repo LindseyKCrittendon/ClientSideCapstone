@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import KidCard from './KidCard'
 import KidManager from '../../modules/KidManager'
 import './KidList.css'
-// import NeighborhoodManager from '../../modules/NeighborhoodManager'
-// TODO:  GET NEW KID FORM TO POST AND REPRINT CORRECTLY
+
+// TODO:  WORK ON CHANGING THE BOOLEAN TO SERVED AND REMOVING THAT CHILD FROM VIEW
 
 class KidList extends Component {
     //define what this component needs to render
@@ -43,7 +43,7 @@ class KidList extends Component {
                     <button type="button"
                         className="btn draw"
                         onClick={() => { this.props.history.push("/kids/new") }}>
-                        Add Kid
+                        Add Meal Request
                     </button>
                 </section>
                 <div className="container-cards">

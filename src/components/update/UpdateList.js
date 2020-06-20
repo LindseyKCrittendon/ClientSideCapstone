@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import UpdateCard from './UpdateCard'
 import UpdateManager from '../../modules/UpdateManager'
 import './UpdateList.css'
-//TODO:  GET NEW UPDATE TO POST CORRECTLY AND REPRINT
+//TODO:  WORK ON CONDITIONAL RENDERING AFTER LOGIN WORKING, AND ALLOW VISITORS TO SEE UPDATE WITH A DROPDOWN MENU TO VIEW UPDATES BY NEIGHBORHOOD
 
 class UpdateList extends Component {
     //define what this component needs to render
