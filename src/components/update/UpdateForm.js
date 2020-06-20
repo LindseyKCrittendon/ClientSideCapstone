@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import UpdateManager from '../../modules/UpdateManager';
 import './UpdateForm.css'
+import NeighborhoodManager from '../../modules/NeighborhoodManager'
+import Form from 'react-bootstrap/Form'
 
 class UpdateForm extends Component {
     state = {
@@ -8,6 +10,7 @@ class UpdateForm extends Component {
         message: "",
         neighborhood: "",
         date: "",
+        neighborhoods: [],
         loadingStatus: false,
     };
 
@@ -17,18 +20,28 @@ class UpdateForm extends Component {
         this.setState(stateToChange);
     };
 
+    componentDidMount(){
+        //getAll from NeighborhoodManager and hang on to that data; put it in state
+        NeighborhoodManager.getAll()
+        .then((neighborhoods) => {
+            this.setState({
+                neighborhoods: neighborhoods
+            })
+        })
+    };
+
     /*  Local method for validation, set loadingStatus, create update object, invoke the UpdateManager post method, and redirect to the full update list
     */
     constructNewUpdate = evt => {
         evt.preventDefault();
-        if (this.state.neighborhood === "" || this.state.date === "" || this.state.message === "") {
+        if (this.state.neighborhoodId === "" || this.state.date === "" || this.state.message === "") {
             window.alert("Please input a neighborhood, date, and message");
         } else {
             this.setState({ loadingStatus: true });
             const update = {
                 date: this.state.date,
                 message: this.state.message,
-                neighborhood: this.state.neighborhoodId,
+                neighborhoodId: this.state.neighborhoodId,
                 truckId: this.state.truckId
             };
 
@@ -61,6 +74,16 @@ class UpdateForm extends Component {
                         placeholder="Message"
                         />
                         <label htmlFor="message">Message</label>
+                        <Form.Group controlId="exampleForm.ControlSelect1">
+                                <Form.Label>Neighborhood</Form.Label>
+                                <Form.Control as="select"  onChange={this.handleFieldChange}
+                                id="neighborhoodId">
+                                {/* try onchange where select is */}
+                                {this.state.neighborhoods.map(neighborhood =>
+                                <option value={neighborhood.id}>{neighborhood.name}</option>
+                                 )}
+                                </Form.Control>
+                            </Form.Group>
                     </div>
                     <div className="alignRight draw">
                         <button

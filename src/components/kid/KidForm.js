@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import KidManager from '../../modules/KidManager';
 import Form from 'react-bootstrap/Form'
 import './KidForm.css'
+import NeighborhoodManager from '../../modules/NeighborhoodManager'
+
 // TODO:: COLLECT NEIGHBORHOOD ID BY NEIGHBORHOOD SELECTION IN FORM
 
 class KidForm extends Component {
     state = {
         caregiver: "",
         age: "",
-        neighborhood: "",
+        neighborhoodId: "",
+        neighborhoods: [],
         served: false,
         loadingStatus: false,
     };
@@ -19,18 +22,29 @@ class KidForm extends Component {
         this.setState(stateToChange);
     };
 
+    componentDidMount(){
+        //getAll from NeighborhoodManager and hang on to that data; put it in state
+        NeighborhoodManager.getAll()
+        .then((neighborhoods) => {
+            this.setState({
+                neighborhoods: neighborhoods
+            })
+        })
+    }
+
     /*  Local method for validation, set loadingStatus, create kid object, invoke the KidManager post method, and redirect to the full Kid list
     */
     constructNewKid = evt => {
         evt.preventDefault();
-        if (this.state.caregiver === "" || this.state.age === "" || this.state.neighborhood === "") {
+        if (this.state.caregiver === "" || this.state.age === "" || this.state.neighborhoodId === "") {
             window.alert("Please input a caregiver name, child age, and neighborhood");
         } else {
             this.setState({ loadingStatus: true });
             const kid = {
                 caregiver: this.state.caregiver,
                 age: this.state.age,
-                neighborhood: this.state.neighborhoodId
+                neighborhoodId: this.state.neighborhoodId,
+                served: false
             };
 
             // Create the child and redirect user to kid list
@@ -41,7 +55,7 @@ class KidForm extends Component {
 
     render() {
 
-        //TODO FIGURE OUT HOW TO POST NEIGHBORHOOD ID BY NEIGHBORHOOD NAME ON THE FORM.  FIGURE OUT HOW TO GET THE EVENT LISTENER ON THE DROP DOWNS
+        //TODO FIGURE OUT HOW TO GET THE EVENT LISTENER ON THE DROP DOWNS
 
         return (
             <>
@@ -66,12 +80,12 @@ class KidForm extends Component {
                             <label htmlFor="age">Age</label>
                             <Form.Group controlId="exampleForm.ControlSelect1">
                                 <Form.Label>Neighborhood</Form.Label>
-                                <Form.Control as="select">
-                                    <option>Downtown Charleston</option>
-                                    <option>Switzer Center</option>
-                                    <option>West Side</option>
-                                    <option>Kanawha City</option>
-                                    <option>South Park Village</option>
+                                <Form.Control as="select"  onChange={this.handleFieldChange}
+                                id="neighborhoodId">
+                                {/* try onchange where select is */}
+                                {this.state.neighborhoods.map(neighborhood =>
+                                <option value={neighborhood.id}>{neighborhood.name}</option>
+                                 )}
                                 </Form.Control>
                             </Form.Group>
                         </div>
