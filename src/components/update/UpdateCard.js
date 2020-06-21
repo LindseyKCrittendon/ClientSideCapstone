@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Media from 'react-bootstrap/Media'
+import './UpdateCard.css'
 
 class UpdateCard extends Component {
   render() {
@@ -15,17 +16,17 @@ class UpdateCard extends Component {
       //     </div> */}
       // // </div>
       <>
-      <Media>
+      <Media className="update-container">
   <img
     width={64}
     height={64}
     className="mr-3"
     src="../nav/logo.jpg"
-    alt="Generic placeholder"
+    alt=""
   />
   <Media.Body>
-    <h4>{this.props.update.neighborhood.name}</h4>
-    <h5>{this.props.update.date}</h5>
+    <h5>{this.props.update.neighborhood.name}</h5>
+    <p>{this.props.update.date}</p>
     <p>{this.props.update.message}
       
       <button type="button" className="draw" onClick={() => this.props.deleteUpdate(this.props.update.id)}>Delete</button>

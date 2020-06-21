@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import KidCard from './KidCard'
 import KidManager from '../../modules/KidManager'
-import './KidList.css'
+
 
 // TODO:  WORK ON CHANGING THE BOOLEAN TO SERVED AND REMOVING THAT CHILD FROM VIEW
 
