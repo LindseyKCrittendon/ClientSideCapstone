@@ -5,6 +5,7 @@ import UpdateManager from '../../modules/UpdateManager'
 import './UpdateCard.css'
 
 //TODO:  WORK ON CONDITIONAL RENDERING AFTER LOGIN WORKING, AND ALLOW VISITORS TO SEE UPDATE WITH A DROPDOWN MENU TO VIEW UPDATES BY NEIGHBORHOOD
+//TODO:: UPDATES PRINTING OUT OF ORDER BY DATE.  I WANT NEWEST UPDATE ON TOP.
 
 class UpdateList extends Component {
     //define what this component needs to render
@@ -46,7 +47,7 @@ class UpdateList extends Component {
                         onClick={() => { this.props.history.push("/updates/new") }}>
                         New Update
                     </button>
-                    
+
                 </section>
                 <div className="container-cards">
                     {this.state.updates.map(update =>
