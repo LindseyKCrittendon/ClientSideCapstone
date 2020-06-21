@@ -4,6 +4,7 @@ import KidManager from '../../modules/KidManager'
 
 
 // TODO:  WORK ON CHANGING THE BOOLEAN TO SERVED AND REMOVING THAT CHILD FROM VIEW
+//TODO:: TO DO THAT I NEED TO UNDERSTAND HOW TO MAKE MULTIPLE API CALLS SIMULTANEOUSLY.  SO FAR, RESEARCH INDICATES CONDITIONAL IN THE FETCH CALL?
 
 class KidList extends Component {
     //define what this component needs to render

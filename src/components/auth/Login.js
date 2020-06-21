@@ -1,3 +1,7 @@
+//TODO:: FIGURE OUT HOW TO MAKE A LOGIN ITS OWN PAGE AND HOW TO CONDITIONALLY RENDER RATHER THAN CONDITIONALLY ROUTE
+
+
+
 // import React, { Component } from "react"
 
 // class Login extends Component {
