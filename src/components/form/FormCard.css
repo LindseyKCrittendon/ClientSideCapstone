@@ -19,7 +19,7 @@
     justify-content: center;
 }
 
-button {
+/* button {
     background: none;
     border: 0;
     box-sizing: border-box;
@@ -75,4 +75,4 @@ button {
     border-left-color: #60daaa;
     -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
     transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-  }
+  } */

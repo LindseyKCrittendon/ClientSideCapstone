@@ -10,10 +10,9 @@
   "updates": [
     {
       "id": 1,
-      "truckId": 1,
-      "message": "The truck will serve grilled cheeses, fresh fruit, and your choice of milk, juice, or water.",
-      "date": "06/19/2020",
-      "neighborhoodId": 1
+      "message": "The truck will serve grilled steak, fresh fruit, and your choice of milk, juice, or water.",
+      "date": "2020-06-26",
+      "neighborhoodId": "3"
     },
     {
       "date": "06/19/2020",

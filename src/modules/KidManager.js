@@ -4,6 +4,7 @@ export default {
   get(id) {
     return fetch(`${remoteURL}/kids/${id}`).then(result => result.json())
   },
+  // TODO:: HOW DO I FETCH BY SERVED=FALSE AS WELL AS BY NEIGHBORHOOD
   getAll() {
     return fetch(`${remoteURL}/kids?_expand=neighborhood`).then(result => result.json())
   },
@@ -30,5 +31,15 @@ update(editedKid) {
     },
     body: JSON.stringify(editedKid)
   }).then(data => data.json());
-}
+},
+    // changes the boolean of completed from false to true when the checkbox is clicked in served
+    served(id) {
+      return fetch(`${remoteURL}/kids/${id}`, {
+           method: "PATCH",
+           headers: {
+               "Content-Type": "application/json"
+           },
+           body: JSON.stringify({ served: true })
+       }).then(r => r.json())
+   }
 }
