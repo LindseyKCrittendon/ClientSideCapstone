@@ -10,10 +10,9 @@
   "updates": [
     {
       "id": 1,
-      "truckId": 1,
-      "message": "The truck will serve grilled cheeses, fresh fruit, and your choice of milk, juice, or water.",
-      "date": "06/19/2020",
-      "neighborhoodId": 1
+      "message": "The truck will serve grilled steak, fresh fruit, and your choice of milk, juice, or water.",
+      "date": "2020-06-26",
+      "neighborhoodId": "3"
     },
     {
       "date": "06/19/2020",
@@ -58,14 +57,21 @@
       "neighborhoodId": 4,
       "age": "2",
       "caregiver": "Jade Adkins",
-      "served": false
+      "served": true
     },
     {
       "id": 6,
       "caregiver": "Jeremy Critt",
       "age": "11",
       "neighborhoodId": "3",
-      "served": false
+      "served": true
+    },
+    {
+      "id": 7,
+      "caregiver": "test testing",
+      "age": "11",
+      "neighborhoodId": "2",
+      "served": true
     }
   ]
 }

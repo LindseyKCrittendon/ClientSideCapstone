@@ -1,5 +1,6 @@
 .address{
     text-align: center;
+    color: brown;
 }
 
 .description{
@@ -8,15 +9,32 @@
 }
 
 .description-container{
-    border: groove 2px #ff96c5;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: groove 3px #f6e8b1;
     align-items: center;
     padding: 2em;
     width: 50%;
     margin-top: 5em;
     margin-left: 22em;
-    border-radius: 30px;
+    border-radius: 5px;
+    background-color: #e7c582;
+    color: brown;
 }
-button{
-    margin: 4px;
-   
-}
+button {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #f45e61;
+    border: none;
+    color: #f6e8b1;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    padding: .5em;
+    border-radius: 2px;
+    margin: .1em;
+    width: 20%;
+  }
+
+  button:hover {
+    background-color: brown;
+  }

@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import KidCard from './KidCard'
 import KidManager from '../../modules/KidManager'
-import './KidList.css'
 
-// TODO:  WORK ON CHANGING THE BOOLEAN TO SERVED AND REMOVING THAT CHILD FROM VIEW
+
+
+// TODO:: CONDITIONALLY RENDER ITEMS IN VIEW DEPENDING ON LOGIN
+
+
 
 class KidList extends Component {
     //define what this component needs to render
     state = {
         kids: [],
+        showServedKids: false,
     }
 
     deleteKid = id => {
@@ -34,6 +38,18 @@ class KidList extends Component {
             })
     }
 
+    served = id => {
+        KidManager.served(id)
+        .then(KidManager.getAll)
+          .then((newKids) => {
+            this.setState({
+                kids: newKids
+            })
+          })
+         
+    }
+
+
     render() {
 
 
@@ -45,15 +61,33 @@ class KidList extends Component {
                         onClick={() => { this.props.history.push("/kids/new") }}>
                         Add Meal Request
                     </button>
+                    <button type="button" className="btn" onClick={() => {this.setState({showServedKids: !this.state.showServedKids})}}
+                    >View Served</button>
                 </section>
                 <div className="container-cards">
                     {this.state.kids.map(kid =>
-                        <KidCard
+                    !kid.served & !this.state.showServedKids ?
+                    <KidCard
                             key={kid.id}
                             kid={kid}
                             deleteKid={this.deleteKid}
+                            served={this.served}
+                           
                             {...this.props}
                         />
+                    :
+                    kid.served & this.state.showServedKids ?
+                            <KidCard
+                            key={kid.id}
+                            kid={kid}
+                            deleteKid={this.deleteKid}
+                            served={this.served}
+                   
+                            {...this.props}
+                    />
+                    :
+                       null
+                        
                     )}
                     
                 </div>
