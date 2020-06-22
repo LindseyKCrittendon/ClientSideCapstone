@@ -57,14 +57,14 @@
       "neighborhoodId": 4,
       "age": "2",
       "caregiver": "Jade Adkins",
-      "served": false
+      "served": true
     },
     {
       "id": 6,
       "caregiver": "Jeremy Critt",
       "age": "11",
       "neighborhoodId": "3",
-      "served": false
+      "served": true
     },
     {
       "id": 7,

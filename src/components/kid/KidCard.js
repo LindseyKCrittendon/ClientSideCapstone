@@ -11,10 +11,17 @@ class KidCard extends Component {
           <p>Child Age: {this.props.kid.age}</p>
           <p>Neighborhood: {this.props.kid.neighborhood.name}</p>
           <form>
-          <label>
+            {
+              //Tests to see if a child has been served and disables button if so.
+          this.props.kid.served ?
+    
+             <p>Served</p>
+           :
+           <label>
            Served:
          <input type="checkbox" name="checkbox" onChange={() => this.props.served(this.props.kid.id)}></input>
          </label>
+  }
           </form>
           <button type="button" className="draw" onClick={() => this.props.deleteKid(this.props.kid.id)}>Delete</button>
           <button type="button"

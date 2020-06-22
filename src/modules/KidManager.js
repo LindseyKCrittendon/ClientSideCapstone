@@ -4,9 +4,9 @@ export default {
   get(id) {
     return fetch(`${remoteURL}/kids/${id}`).then(result => result.json())
   },
-  // TODO:: HOW DO I FETCH BY SERVED=FALSE AS WELL AS BY NEIGHBORHOOD
+  // Use & to fetch multiple things at once, but can use conditional to speed up app
   getAll() {
-    return fetch(`${remoteURL}/kids?_expand=neighborhood&served=false`).then(result => result.json())
+    return fetch(`${remoteURL}/kids?_expand=neighborhood`).then(result => result.json())
   },
   delete(id) {
     return fetch(`http://localhost:8000/kids/${id}`, {
