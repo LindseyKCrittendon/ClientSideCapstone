@@ -35,6 +35,17 @@ class KidList extends Component {
             })
     }
 
+    served = id => {
+        KidManager.served(id)
+        .then(KidManager.getAll)
+          .then((newKids) => {
+            this.setState({
+                kids: newKids
+            })
+          })
+         
+    }
+
     render() {
 
 
@@ -53,6 +64,7 @@ class KidList extends Component {
                             key={kid.id}
                             kid={kid}
                             deleteKid={this.deleteKid}
+                            served={this.served}
                             {...this.props}
                         />
                     )}

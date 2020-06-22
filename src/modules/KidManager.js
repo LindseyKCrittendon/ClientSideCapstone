@@ -6,7 +6,7 @@ export default {
   },
   // TODO:: HOW DO I FETCH BY SERVED=FALSE AS WELL AS BY NEIGHBORHOOD
   getAll() {
-    return fetch(`${remoteURL}/kids?_expand=neighborhood`).then(result => result.json())
+    return fetch(`${remoteURL}/kids?_expand=neighborhood&served=false`).then(result => result.json())
   },
   delete(id) {
     return fetch(`http://localhost:8000/kids/${id}`, {

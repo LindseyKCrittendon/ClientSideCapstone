@@ -13,7 +13,7 @@ class KidCard extends Component {
           <form>
           <label>
            Served:
-         <input type="checkbox" name="checkbox"></input>
+         <input type="checkbox" name="checkbox" onChange={() => this.props.served(this.props.kid.id)}></input>
          </label>
           </form>
           <button type="button" className="draw" onClick={() => this.props.deleteKid(this.props.kid.id)}>Delete</button>
