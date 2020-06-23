@@ -3,8 +3,12 @@ import "./Kid.css"
 
 
 class KidCard extends Component {
+  isAuthenticated = () => localStorage.getItem("credentials") !== null;
   render() {
     return (
+      <>
+      {
+      this.isAuthenticated () ?
       <div className="card">
         <div className="card-content">
           <h3>Caregiver Name: <span className="card-caregiverName">{this.props.kid.caregiver}</span></h3>
@@ -29,6 +33,9 @@ class KidCard extends Component {
         
         </div>
       </div>
+      :
+      null}
+      </>
     );
   }
 }
