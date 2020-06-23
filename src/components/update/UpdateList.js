@@ -36,10 +36,14 @@ class UpdateList extends Component {
             })
     }
 
+    isAuthenticated = () => localStorage.getItem("credentials") !== null
+
     render() {
 
-
+        
         return (
+            <>
+            {this.isAuthenticated() ?
             <>
                 <section className="section-content">
                     <button type="button"
@@ -59,7 +63,20 @@ class UpdateList extends Component {
                         />
                     )}
                 </div>
-            </>
+                </>
+                :
+                <div className="container-cards">
+                {this.state.updates.map(update =>
+                    <UpdateCard
+                        key={update.id}
+                        update={update}
+                        deleteUpdate={this.deleteUpdate}
+                        {...this.props}
+                    />
+                )}
+            </div>
+    }
+           </> 
         )
     }
 }

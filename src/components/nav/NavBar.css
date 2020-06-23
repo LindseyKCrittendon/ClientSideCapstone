@@ -7,7 +7,7 @@ small {
   }
   
   header {
-    background-color:#ff5768;
+    background-color:#a63d40;
     border: groove 3px #f6e8b1;
     
     
@@ -31,7 +31,7 @@ small {
     font-size: 1.5em;
     color: #f6e8b1;
     box-sizing: border-box;
-    background-color: #ff5768;
+    background-color: #a63d40;
     list-style-type: none;
     
     /* border: groove #ff96c5 2px; */
@@ -42,7 +42,7 @@ small {
   }
   
   nav .container a:hover {
-    color: brown;
+    color: #61210f;
   }
 
   

@@ -2,7 +2,7 @@ import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './home/Home'
 import KidList from './kid/KidList'
-import FormList from './form/FormList'
+import Login from './auth/Login'
 import UpdateList from './update/UpdateList'
 import KidForm from './kid/KidForm'
 import UpdateForm from './update/UpdateForm'
@@ -12,6 +12,9 @@ import UpdateEditForm from './update/UpdateEditForm'
 
 
 class ApplicationViews extends Component {
+     // Check if credentials are in local storage
+    //returns true/false
+    isAuthenticated = () => localStorage.getItem("credentials") !== null
 
     render() {
         return (
@@ -19,8 +22,8 @@ class ApplicationViews extends Component {
                 <Route exact path="/" render={(props) => {
                     return <Home />
                 }} />
-                <Route path="/forms" render={(props) => {
-                    return <FormList />
+                <Route path="/login" render={(props) => {
+                    return <Login />
                 }} />
                 <Route exact path="/updates" render={(props) => {
                     return <UpdateList {...props}/>

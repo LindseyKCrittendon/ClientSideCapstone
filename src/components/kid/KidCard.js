@@ -3,8 +3,12 @@ import "./Kid.css"
 
 
 class KidCard extends Component {
+  isAuthenticated = () => localStorage.getItem("credentials") !== null;
   render() {
     return (
+      <>
+      {
+      this.isAuthenticated () ?
       <div className="card">
         <div className="card-content">
           <h3>Caregiver Name: <span className="card-caregiverName">{this.props.kid.caregiver}</span></h3>
@@ -14,7 +18,7 @@ class KidCard extends Component {
             {
               //Tests to see if a child has been served and disables button if so.
           this.props.kid.served ?
-    
+            
              <p>Served</p>
            :
            <label>
@@ -23,11 +27,22 @@ class KidCard extends Component {
          </label>
   }
           </form>
-          <button type="button" className="draw" onClick={() => this.props.deleteKid(this.props.kid.id)}>Delete</button>
+          {this.props.kid.served ?
           <button type="button"
         onClick={() => {this.props.history.push(`/kids/${this.props.kid.id}/edit`)}}>Edit</button>
+        :
+        <>
+        <button type="button"
+        onClick={() => {this.props.history.push(`/kids/${this.props.kid.id}/edit`)}}>Edit</button>
+          <button type="button" className="draw" onClick={() => this.props.deleteKid(this.props.kid.id)}>Delete</button></>
+  }
+          
+        
         </div>
       </div>
+      :
+      null}
+      </>
     );
   }
 }

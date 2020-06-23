@@ -1,4 +1,5 @@
-//TODO:: FIGURE OUT HOW TO MAKE A LOGIN ITS OWN PAGE AND HOW TO CONDITIONALLY RENDER RATHER THAN CONDITIONALLY ROUTE
+//TODO:: GET FORM TO CLEAR AFTER USER PRESSES SUBMIT
+//TODO:: CONDITIONALLY RENDER RATHER THAN CONDITIONALLY ROUTE
 
 
 
@@ -8,7 +9,7 @@ class Login extends Component {
 
   // Set initial state
   state = {
-    email: "",
+    username: "",
     password: ""
   }
 
@@ -28,11 +29,11 @@ class Login extends Component {
     localStorage.setItem(
         "credentials",
         JSON.stringify({
-            email: this.state.email,
+            username: this.state.username,
             password: this.state.password
         })
     )
-    this.props.history.push("/users");
+    // this.props.history.push("/users");
 
   }
 
@@ -42,11 +43,11 @@ class Login extends Component {
         <fieldset>
             <h3>Please sign in</h3>
             <div className="formgrid">
-                <input onChange={this.handleFieldChange} type="email"
-                    id="email"
-                    placeholder="Email address"
+                <input onChange={this.handleFieldChange} type="text"
+                    id="username"
+                    placeholder="User Name"
                     required="" autoFocus="" />
-                <label htmlFor="inputEmail">Email address</label>
+                <label htmlFor="inputUsername">User Name</label>
 
                 <input onChange={this.handleFieldChange} type="password"
                     id="password"

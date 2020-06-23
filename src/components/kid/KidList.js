@@ -10,6 +10,7 @@ import KidManager from '../../modules/KidManager'
 
 class KidList extends Component {
     //define what this component needs to render
+    // added another property to state to allow me to test with a conditional and render a different state.
     state = {
         kids: [],
         showServedKids: false,
@@ -49,18 +50,24 @@ class KidList extends Component {
          
     }
 
+    isAuthenticated = () => localStorage.getItem("credentials") !== null
+
 
     render() {
 
 
         return (
             <>
+            {
+                this.isAuthenticated() ?
+<>
                 <section className="section-content">
                     <button type="button"
                         className="btn draw"
                         onClick={() => { this.props.history.push("/kids/new") }}>
                         Add Meal Request
                     </button>
+                    {/* button to toggle between served and unserved children */}
                     <button type="button" className="btn" onClick={() => {this.setState({showServedKids: !this.state.showServedKids})}}
                     >View Served</button>
                 </section>
@@ -91,6 +98,17 @@ class KidList extends Component {
                     )}
                     
                 </div>
+                </>
+                :
+                <section className="section-content">
+                <button type="button"
+                    className="btn draw"
+                    onClick={() => { this.props.history.push("/kids/new") }}>
+                    Add Meal Request
+                </button>
+              
+            </section>
+    }
             </>
         )
     }
