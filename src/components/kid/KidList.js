@@ -50,12 +50,17 @@ class KidList extends Component {
          
     }
 
+    isAuthenticated = () => localStorage.getItem("credentials") !== null
+
 
     render() {
 
 
         return (
             <>
+            {
+                this.isAuthenticated() ?
+<>
                 <section className="section-content">
                     <button type="button"
                         className="btn draw"
@@ -93,6 +98,17 @@ class KidList extends Component {
                     )}
                     
                 </div>
+                </>
+                :
+                <section className="section-content">
+                <button type="button"
+                    className="btn draw"
+                    onClick={() => { this.props.history.push("/kids/new") }}>
+                    Add Meal Request
+                </button>
+              
+            </section>
+    }
             </>
         )
     }
