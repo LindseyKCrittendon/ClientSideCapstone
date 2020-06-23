@@ -4,20 +4,21 @@
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
     background:#e7c582;
+    border: groove 2px #f6e8b1;
   }
   
   .card-content h3 {
     margin-top: 0;
     margin-bottom: .5em;
     font-weight: bold;
-    color: brown;
+    color: #4c2719;
   }
   
 
   
   .card button {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #f45e61;
+    background-color: #437c90;
     border: none;
     color: #f6e8b1;
     text-align: center;
@@ -31,6 +32,6 @@
   }
   
   .card button:hover {
-    background-color: brown;
+    background-color: #255957;
   }
   

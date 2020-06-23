@@ -1,6 +1,6 @@
 .address{
     text-align: center;
-    color: brown;
+    color: #4c2719;
 }
 
 .description{
@@ -18,11 +18,11 @@
     margin-left: 22em;
     border-radius: 5px;
     background-color: #e7c582;
-    color: brown;
+    color: #4c2719;
 }
 button {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background-color: #f45e61;
+    background-color: #437c90;
     border: none;
     color: #f6e8b1;
     text-align: center;
@@ -36,5 +36,5 @@ button {
   }
 
   button:hover {
-    background-color: brown;
+    background-color: #255957;
   }
