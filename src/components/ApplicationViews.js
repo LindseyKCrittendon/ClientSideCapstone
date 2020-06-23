@@ -2,7 +2,7 @@ import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './home/Home'
 import KidList from './kid/KidList'
-import FormList from './form/FormList'
+import Login from './auth/Login'
 import UpdateList from './update/UpdateList'
 import KidForm from './kid/KidForm'
 import UpdateForm from './update/UpdateForm'
@@ -20,7 +20,7 @@ class ApplicationViews extends Component {
                     return <Home />
                 }} />
                 <Route path="/forms" render={(props) => {
-                    return <FormList />
+                    return <Login />
                 }} />
                 <Route exact path="/updates" render={(props) => {
                     return <UpdateList {...props}/>

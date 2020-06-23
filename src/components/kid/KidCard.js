@@ -14,7 +14,7 @@ class KidCard extends Component {
             {
               //Tests to see if a child has been served and disables button if so.
           this.props.kid.served ?
-    
+            
              <p>Served</p>
            :
            <label>
@@ -23,9 +23,10 @@ class KidCard extends Component {
          </label>
   }
           </form>
-          <button type="button" className="draw" onClick={() => this.props.deleteKid(this.props.kid.id)}>Delete</button>
           <button type="button"
         onClick={() => {this.props.history.push(`/kids/${this.props.kid.id}/edit`)}}>Edit</button>
+          <button type="button" className="draw" onClick={() => this.props.deleteKid(this.props.kid.id)}>Delete</button>
+        
         </div>
       </div>
     );
