@@ -12,6 +12,9 @@ import UpdateEditForm from './update/UpdateEditForm'
 
 
 class ApplicationViews extends Component {
+     // Check if credentials are in local storage
+    //returns true/false
+    isAuthenticated = () => localStorage.getItem("credentials") !== null
 
     render() {
         return (
@@ -19,7 +22,7 @@ class ApplicationViews extends Component {
                 <Route exact path="/" render={(props) => {
                     return <Home />
                 }} />
-                <Route path="/forms" render={(props) => {
+                <Route path="/login" render={(props) => {
                     return <Login />
                 }} />
                 <Route exact path="/updates" render={(props) => {
