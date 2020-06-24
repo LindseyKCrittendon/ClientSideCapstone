@@ -20,7 +20,7 @@
     background-color: #e7c582;
     color: #4c2719;
 }
-button {
+.button {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background-color: #a63d40;
     border: none;
@@ -35,6 +35,8 @@ button {
     width: 20%;
   }
 
-  button:hover {
+  
+
+  .button:hover {
     background-color: #61210f;
   }

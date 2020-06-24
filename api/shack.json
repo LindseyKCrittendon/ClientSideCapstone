@@ -10,9 +10,9 @@
   "updates": [
     {
       "id": 1,
-      "message": "The truck will serve grilled steak, fresh fruit, and your choice of milk, juice, or water.",
-      "date": "2020-06-26",
-      "neighborhoodId": "3"
+      "message": "We're bringing you VEGGIES",
+      "date": "2020-06-27",
+      "neighborhoodId": "5"
     },
     {
       "date": "06/19/2020",
@@ -50,7 +50,7 @@
       "caregiver": "Jane Doe",
       "age": "7",
       "neighborhoodId": 3,
-      "served": false
+      "served": true
     },
     {
       "id": 4,
@@ -79,6 +79,20 @@
       "neighborhoodId": "5",
       "served": false,
       "id": 9
+    },
+    {
+      "id": 10,
+      "caregiver": "Lindsey Crittendon",
+      "age": "10",
+      "neighborhoodId": "2",
+      "served": true
+    },
+    {
+      "caregiver": "Barney",
+      "age": "5",
+      "neighborhoodId": "3",
+      "served": false,
+      "id": 11
     }
   ]
 }
