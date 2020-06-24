@@ -3,7 +3,7 @@ import UpdateManager from '../../modules/UpdateManager';
 import './UpdateForm.css'
 import NeighborhoodManager from '../../modules/NeighborhoodManager'
 import Form from 'react-bootstrap/Form'
-
+// TODO:: FIX ISSUES WITH DROPDOWN SELECT.  IF USER DOES NOT CLICK => RETURNS NULL.  REPOPULATES CORRECT VALUE IN EDITING BEHIND THE SCENES BUT NOT VISUALLY FOR THE USER
 class UpdateForm extends Component {
     state = {
         truckId: 1,

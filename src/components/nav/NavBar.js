@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import './NavBar.css'
 // import './logo.jpg'
 
+// TODO:: CHANGE LOGIN IN NAV BAR WHEN USER IS LOGGED IN TO GIVE USER THE OPTION TO LOGOUT.
+// TODO:: CREATE LOGOUT FUNCTIONALITY
 class NavBar extends Component {
 
   render(){

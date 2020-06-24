@@ -4,7 +4,7 @@ import "./KidForm.css"
 import Form from 'react-bootstrap/Form'
 import NeighborhoodManager from "../../modules/NeighborhoodManager"
 
-// TODO:: CHANGE THE BOOLEAN WITH AN EVENT LISTENER AND REMOVE THE KID FROM THE PAGE...THEN PRINT THE SERVED CHILDREN ON A DIFFERENT PAGE.
+// TODO:: FIX ISSUES WITH DROPDOWN SELECT.  IF USER DOES NOT CLICK => RETURNS NULL.  REPOPULATES CORRECT VALUE IN EDITING BEHIND THE SCENES BUT NOT VISUALLY FOR THE USER
 
 class KidEditForm extends Component {
     //set the initial state
