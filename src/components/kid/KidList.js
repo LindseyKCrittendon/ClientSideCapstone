@@ -4,7 +4,7 @@ import KidManager from '../../modules/KidManager'
 
 
 
-// TODO:: CONDITIONALLY RENDER ITEMS IN VIEW DEPENDING ON LOGIN
+// TODO:: BROKEN COMPLETELY NOW AND NO IDEA WHY
 
 
 

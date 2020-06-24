@@ -43,7 +43,7 @@ class KidForm extends Component {
             const kid = {
                 caregiver: this.state.caregiver,
                 age: this.state.age,
-                neighborhoodId: this.state.neighborhoodId,
+                neighborhoodId: parseInt(this.state.neighborhoodId),
                 served: false
             };
 

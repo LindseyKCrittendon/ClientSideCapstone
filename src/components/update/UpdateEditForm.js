@@ -27,7 +27,7 @@ class UpdateEditForm extends Component {
         id: this.props.match.params.updateId,
         message: this.state.message,
         date: this.state.date,
-        neighborhoodId: this.state.neighborhoodId
+        neighborhoodId: parseInt(this.state.neighborhoodId)
       };
 
       UpdateManager.update(editedUpdate)

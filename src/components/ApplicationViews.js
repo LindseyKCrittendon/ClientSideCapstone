@@ -23,7 +23,11 @@ class ApplicationViews extends Component {
                     return <Home />
                 }} />
                 <Route path="/login" render={(props) => {
-                    return <Login />
+                    if (this.isAuthenticated()) {
+                        return <Redirect to ="/kids" />
+                    }else{
+                    return <Login {...props} />
+                    }
                 }} />
                 <Route exact path="/updates" render={(props) => {
                     return <UpdateList {...props}/>

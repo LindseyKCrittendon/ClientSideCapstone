@@ -41,7 +41,7 @@ class UpdateForm extends Component {
             const update = {
                 date: this.state.date,
                 message: this.state.message,
-                neighborhoodId: this.state.neighborhoodId,
+                neighborhoodId: parseInt(this.state.neighborhoodId),
                 truckId: this.state.truckId
             };
 
