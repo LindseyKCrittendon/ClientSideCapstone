@@ -18,10 +18,10 @@ class NavBar extends Component {
         </h1>
         <nav>
           <ul className="container">
-            <li><Link className="nav-link draw button" to="/">Home</Link></li>
-            <li><Link className="nav-link draw button" to="/login">Login</Link></li>
-            <li><Link className="nav-link draw button" to="/updates">Updates</Link></li>
-            <li><Link className="nav-link draw button" to="/kids">Meal Requests</Link></li>
+            <li><Link className="nav-link tab" to="/">Home</Link></li>
+            <li><Link className="nav-link tab" to="/login">Login</Link></li>
+            <li><Link className="nav-link tab" to="/updates">Updates</Link></li>
+            <li><Link className="nav-link tab" to="/kids">Meal Requests</Link></li>
           </ul>
         </nav>
       </header>
