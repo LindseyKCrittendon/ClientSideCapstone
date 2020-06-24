@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './home/Home'
 import KidList from './kid/KidList'
@@ -35,7 +35,10 @@ class ApplicationViews extends Component {
                     return <UpdateEditForm {...props} />
                 }}/>
                 <Route exact path="/kids" render={(props) => {
+                    if (this.isAuthenticated ()) {
                     return <KidList {...props}/>
+                    }else {return <Redirect to ="/kids/new" />
+                }
                 }} />
                 <Route path="/kids/new" render={(props) => {
                     return <KidForm {...props} />
