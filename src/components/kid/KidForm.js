@@ -78,7 +78,7 @@ class KidForm extends Component {
                                 placeholder="Child's Age"
                             />
                             <label htmlFor="age">Age</label>
-                            <Form.Group controlId="exampleForm.ControlSelect1">
+                            <Form.Group>
                                 <Form.Label>Neighborhood</Form.Label>
                                 <Form.Control as="select"  onChange={this.handleFieldChange}
                                 id="neighborhoodId">
