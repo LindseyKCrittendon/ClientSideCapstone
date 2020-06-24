@@ -82,6 +82,7 @@ class UpdateForm extends Component {
                                 {this.state.neighborhoods.map(neighborhood =>
                                 <option value={neighborhood.id}>{neighborhood.name}</option>
                                  )}
+                                 <option>Choose Neighborhood</option>
                                 </Form.Control>
                             </Form.Group>
                     </div>

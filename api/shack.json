@@ -34,6 +34,13 @@
       "neighborhoodId": 4,
       "truckId": 1,
       "id": 4
+    },
+    {
+      "date": "2020-06-17",
+      "message": "I am testing the drop down selection",
+      "neighborhoodId": 2,
+      "truckId": 1,
+      "id": 5
     }
   ],
   "neighborhoods": [
@@ -114,6 +121,13 @@
       "age": "17",
       "neighborhoodId": 5,
       "served": false
+    },
+    {
+      "caregiver": "testing dropdown",
+      "age": "12",
+      "neighborhoodId": 1,
+      "served": false,
+      "id": 16
     }
   ]
 }
