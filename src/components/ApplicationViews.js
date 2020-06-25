@@ -31,7 +31,7 @@ class ApplicationViews extends Component {
                         return <Redirect to ="/kids" />
                     }else{
                         // passing down props from Shack.js to login
-                    return <Login handleLoginChange={this.props.handleLoginChange}  {...props} />
+                    return <Login handleLoginChange={this.props.handleLoginChange} handleLogoutChange={this.props.handleLogoutChange} {...props} />
                     }
                 }} />
                 <Route exact path="/updates" render={(props) => {

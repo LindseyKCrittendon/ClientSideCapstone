@@ -14,6 +14,9 @@ class Shack extends Component {
 handleLoginChange = () =>
 this.setState({loggedIn: true})
 
+handleLogoutChange = () =>
+this.setState({loggedIn: false})
+
   render() {
     return (
       <>
