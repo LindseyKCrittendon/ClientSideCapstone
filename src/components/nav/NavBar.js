@@ -3,9 +3,14 @@ import { Link } from "react-router-dom"
 import './NavBar.css'
 // import './logo.jpg'
 
-// TODO:: CHANGE LOGIN IN NAV BAR WHEN USER IS LOGGED IN TO GIVE USER THE OPTION TO LOGOUT.
+// this.props.handleLogoutChange()
 // TODO:: CREATE LOGOUT FUNCTIONALITY
+
+
 class NavBar extends Component {
+  state = {
+    loggedIn: false,
+  }
 
   render(){
 
@@ -24,7 +29,7 @@ class NavBar extends Component {
             {!this.props.loggedIn ?
             <li><Link className="nav-link tab" to="/login">Login</Link></li>
           :
-          <li><Link className="nav-link tab" to="/login">Logout</Link></li>
+          <li className="nav-link tab" onClick={() => {this.props.handleLogoutChange()}}><Link to="/login">Logout</Link></li>
             }
             <li><Link className="nav-link tab" to="/updates">Updates</Link></li>
             <li><Link className="nav-link tab" to="/kids">Meal Requests</Link></li>

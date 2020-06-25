@@ -14,14 +14,15 @@ class Shack extends Component {
 handleLoginChange = () =>
 this.setState({loggedIn: true})
 
-handleLogoutChange = () =>
-this.setState({loggedIn: false})
+handleLogoutChange = () =>{
+this.setState({loggedIn: false}); localStorage.clear()}
 
   render() {
     return (
       <>
         <NavBar 
-        loggedIn={this.state.loggedIn}
+        loggedIn={this.state.loggedIn} 
+        handleLogoutChange={this.handleLogoutChange}
         />
         <ApplicationViews 
        

@@ -4,7 +4,7 @@ import KidManager from '../../modules/KidManager'
 
 
 
-// TODO:: CHANGE NAME OF TOGGLE BUTTON WHEN CLICKED
+
 
 
 
