@@ -1,4 +1,4 @@
-//TODO:: GET FORM TO CLEAR AFTER USER PRESSES SUBMIT
+//TODO:: GIVE USER ABILITY TO LOGOUT WITH A CLICK
 //TODO:: CONDITIONALLY RENDER RATHER THAN CONDITIONALLY ROUTE
 
 
@@ -10,7 +10,8 @@ class Login extends Component {
   // Set initial state
   state = {
     username: "",
-    password: ""
+    password: "",
+    loggedIn: false,
   }
 
   // Update state whenever an input field is edited
@@ -33,12 +34,19 @@ class Login extends Component {
             password: this.state.password
         })
     )
-    // this.props.history.push("/users");
+    this.props.handleLoginChange()
+    this.props.history.push("/kids");
 
   }
+// TRYING TO PASS DOWN FROM SHACK.JS
+//   handleLoginChange = () =>
+// this.setState({loggedIn: true})
+
+
 
   render() {
     return (
+      
       <form onSubmit={this.handleLogin}>
         <fieldset>
             <h3>Please sign in</h3>
@@ -58,7 +66,7 @@ class Login extends Component {
             <button type="submit">
                 Sign in
             </button>
-        </fieldset>
+        </fieldset> 
       </form>
     )
   }

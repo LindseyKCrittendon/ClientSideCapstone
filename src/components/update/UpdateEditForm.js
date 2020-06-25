@@ -3,7 +3,7 @@ import UpdateManager from "../../modules/UpdateManager"
 import "./UpdateForm.css"
 import Form from 'react-bootstrap/Form'
 import NeighborhoodManager from "../../modules/NeighborhoodManager"
-
+// TODO:: FIX ISSUES WITH DROPDOWN SELECT.  IF USER DOES NOT CLICK => RETURNS NULL.  REPOPULATES CORRECT VALUE IN EDITING BEHIND THE SCENES BUT NOT VISUALLY FOR THE USER
 class UpdateEditForm extends Component {
     //set the initial state
     state = {
@@ -27,7 +27,7 @@ class UpdateEditForm extends Component {
         id: this.props.match.params.updateId,
         message: this.state.message,
         date: this.state.date,
-        neighborhoodId: this.state.neighborhoodId
+        neighborhoodId: parseInt(this.state.neighborhoodId)
       };
 
       UpdateManager.update(editedUpdate)
@@ -77,7 +77,7 @@ class UpdateEditForm extends Component {
                 value={this.state.date}
               />
               <label htmlFor="date">Date</label>
-              <Form.Group controlId="exampleForm.ControlSelect1">
+              <Form.Group>
                                 <Form.Label>Neighborhood</Form.Label>
                                 <Form.Control as="select"  onChange={this.handleFieldChange}
                                 id="neighborhoodId">

@@ -4,7 +4,7 @@ import KidManager from '../../modules/KidManager'
 
 
 
-// TODO:: CONDITIONALLY RENDER ITEMS IN VIEW DEPENDING ON LOGIN
+
 
 
 
@@ -68,8 +68,13 @@ class KidList extends Component {
                         Add Meal Request
                     </button>
                     {/* button to toggle between served and unserved children */}
+                    { !this.state.showServedKids?
                     <button type="button" className="btn" onClick={() => {this.setState({showServedKids: !this.state.showServedKids})}}
                     >View Served</button>
+                    :
+                    <button type="button" className="btn" onClick={() => {this.setState({showServedKids: !this.state.showServedKids})}}
+                    >View Meal Requests</button>
+    }
                 </section>
                 <div className="container-cards">
                     {this.state.kids.map(kid =>

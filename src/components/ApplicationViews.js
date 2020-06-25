@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './home/Home'
 import KidList from './kid/KidList'
@@ -8,6 +8,7 @@ import KidForm from './kid/KidForm'
 import UpdateForm from './update/UpdateForm'
 import KidEditForm from './kid/KidEditForm'
 import UpdateEditForm from './update/UpdateEditForm'
+import Shack from './Shack'
 
 
 
@@ -16,6 +17,9 @@ class ApplicationViews extends Component {
     //returns true/false
     isAuthenticated = () => localStorage.getItem("credentials") !== null
 
+    handleLogin = () =>
+    this.props({loggedIn: true})
+
     render() {
         return (
             <React.Fragment>
@@ -23,7 +27,12 @@ class ApplicationViews extends Component {
                     return <Home />
                 }} />
                 <Route path="/login" render={(props) => {
-                    return <Login />
+                    if (this.isAuthenticated()) {
+                        return <Redirect to ="/kids" />
+                    }else{
+                        // passing down props from Shack.js to login
+                    return <Login handleLoginChange={this.props.handleLoginChange} handleLogoutChange={this.props.handleLogoutChange} {...props} />
+                    }
                 }} />
                 <Route exact path="/updates" render={(props) => {
                     return <UpdateList {...props}/>
@@ -35,7 +44,10 @@ class ApplicationViews extends Component {
                     return <UpdateEditForm {...props} />
                 }}/>
                 <Route exact path="/kids" render={(props) => {
+                    if (this.isAuthenticated ()) {
                     return <KidList {...props}/>
+                    }else {return <Redirect to ="/kids/new" />
+                }
                 }} />
                 <Route path="/kids/new" render={(props) => {
                     return <KidForm {...props} />

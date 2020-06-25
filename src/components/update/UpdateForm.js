@@ -3,7 +3,7 @@ import UpdateManager from '../../modules/UpdateManager';
 import './UpdateForm.css'
 import NeighborhoodManager from '../../modules/NeighborhoodManager'
 import Form from 'react-bootstrap/Form'
-
+// TODO:: FIX ISSUES WITH DROPDOWN SELECT.  IF USER DOES NOT CLICK => RETURNS NULL.  REPOPULATES CORRECT VALUE IN EDITING BEHIND THE SCENES BUT NOT VISUALLY FOR THE USER
 class UpdateForm extends Component {
     state = {
         truckId: 1,
@@ -41,7 +41,7 @@ class UpdateForm extends Component {
             const update = {
                 date: this.state.date,
                 message: this.state.message,
-                neighborhoodId: this.state.neighborhoodId,
+                neighborhoodId: parseInt(this.state.neighborhoodId),
                 truckId: this.state.truckId
             };
 
@@ -74,7 +74,7 @@ class UpdateForm extends Component {
                         placeholder="Message"
                         />
                         <label htmlFor="message">Message</label>
-                        <Form.Group controlId="exampleForm.ControlSelect1">
+                        <Form.Group>
                                 <Form.Label>Neighborhood</Form.Label>
                                 <Form.Control as="select"  onChange={this.handleFieldChange}
                                 id="neighborhoodId">
@@ -82,6 +82,7 @@ class UpdateForm extends Component {
                                 {this.state.neighborhoods.map(neighborhood =>
                                 <option value={neighborhood.id}>{neighborhood.name}</option>
                                  )}
+                                 <option>Choose Neighborhood</option>
                                 </Form.Control>
                             </Form.Group>
                     </div>

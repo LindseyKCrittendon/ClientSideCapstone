@@ -5,11 +5,31 @@ import ApplicationViews from "./ApplicationViews"
 import "./Shack.css"
 
 class Shack extends Component {
+
+  state = {
+    // users: [],
+    loggedIn: false,
+}
+
+handleLoginChange = () =>
+this.setState({loggedIn: true})
+
+handleLogoutChange = () =>{
+this.setState({loggedIn: false}); localStorage.clear()}
+
   render() {
     return (
       <>
-        <NavBar />
-        <ApplicationViews />
+        <NavBar 
+        loggedIn={this.state.loggedIn} 
+        handleLogoutChange={this.handleLogoutChange}
+        />
+        <ApplicationViews 
+       
+        // key={users.id}
+        // user={users.id}
+        handleLoginChange={this.handleLoginChange}
+        />
       </>
     )
   }

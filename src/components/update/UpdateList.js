@@ -31,7 +31,7 @@ class UpdateList extends Component {
         UpdateManager.getAll()
             .then((updates) => {
                 this.setState({
-                    updates: updates
+                    updates: updates.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
                 })
             })
     }

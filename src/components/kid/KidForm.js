@@ -4,7 +4,8 @@ import Form from 'react-bootstrap/Form'
 import './KidForm.css'
 import NeighborhoodManager from '../../modules/NeighborhoodManager'
 
-// TODO:: COLLECT NEIGHBORHOOD ID BY NEIGHBORHOOD SELECTION IN FORM
+// TODO:: FIX ISSUES WITH DROPDOWN SELECT.  IF USER DOES NOT CLICK => RETURNS NULL.  REPOPULATES CORRECT VALUE IN EDITING BEHIND THE SCENES BUT NOT VISUALLY FOR THE USER
+// TODO:: RETURN CONFIRMATION MESSAGE FOR VISITORS ONCE THEY SUBMIT A MEAL REQUEST
 
 class KidForm extends Component {
     state = {
@@ -43,7 +44,7 @@ class KidForm extends Component {
             const kid = {
                 caregiver: this.state.caregiver,
                 age: this.state.age,
-                neighborhoodId: this.state.neighborhoodId,
+                neighborhoodId: parseInt(this.state.neighborhoodId),
                 served: false
             };
 
@@ -78,7 +79,7 @@ class KidForm extends Component {
                                 placeholder="Child's Age"
                             />
                             <label htmlFor="age">Age</label>
-                            <Form.Group controlId="exampleForm.ControlSelect1">
+                            <Form.Group>
                                 <Form.Label>Neighborhood</Form.Label>
                                 <Form.Control as="select"  onChange={this.handleFieldChange}
                                 id="neighborhoodId">
@@ -86,6 +87,7 @@ class KidForm extends Component {
                                 {this.state.neighborhoods.map(neighborhood =>
                                 <option value={neighborhood.id}>{neighborhood.name}</option>
                                  )}
+                                 <option>Choose Neighborhood</option>
                                 </Form.Control>
                             </Form.Group>
                         </div>
