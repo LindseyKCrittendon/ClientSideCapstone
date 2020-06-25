@@ -10,7 +10,8 @@ class Login extends Component {
   // Set initial state
   state = {
     username: "",
-    password: ""
+    password: "",
+    loggedIn: false,
   }
 
   // Update state whenever an input field is edited
@@ -33,9 +34,15 @@ class Login extends Component {
             password: this.state.password
         })
     )
+    this.props.handleLoginChange()
     this.props.history.push("/kids");
 
   }
+// TRYING TO PASS DOWN FROM SHACK.JS
+//   handleLoginChange = () =>
+// this.setState({loggedIn: true})
+
+
 
   render() {
     return (
@@ -58,7 +65,7 @@ class Login extends Component {
             <button type="submit">
                 Sign in
             </button>
-        </fieldset>
+        </fieldset> 
       </form>
     )
   }

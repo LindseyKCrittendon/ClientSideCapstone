@@ -21,7 +21,11 @@ class NavBar extends Component {
         <nav>
           <ul className="container">
             <li><Link className="nav-link tab" to="/">Home</Link></li>
+            {!this.props.loggedIn ?
             <li><Link className="nav-link tab" to="/login">Login</Link></li>
+          :
+          <li><Link className="nav-link tab" to="/login">Logout</Link></li>
+            }
             <li><Link className="nav-link tab" to="/updates">Updates</Link></li>
             <li><Link className="nav-link tab" to="/kids">Meal Requests</Link></li>
           </ul>
