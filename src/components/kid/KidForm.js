@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import './KidForm.css'
 import NeighborhoodManager from '../../modules/NeighborhoodManager'
 
-// TODO:: FIX ISSUES WITH DROPDOWN SELECT.  IF USER DOES NOT CLICK => RETURNS NULL.  REPOPULATES CORRECT VALUE IN EDITING BEHIND THE SCENES BUT NOT VISUALLY FOR THE USER
+
 // TODO:: RETURN CONFIRMATION MESSAGE FOR VISITORS ONCE THEY SUBMIT A MEAL REQUEST
 
 class KidForm extends Component {
@@ -18,6 +18,7 @@ class KidForm extends Component {
     };
 
     handleFieldChange = evt => {
+        // window.alert("Thank you for your submission");
         const stateToChange = {};
         stateToChange[evt.target.id] = evt.target.value;
         this.setState(stateToChange);
@@ -32,7 +33,7 @@ class KidForm extends Component {
             })
         })
     }
-
+isAuthenticated = () => localStorage.getItem("credentials") !== null
     /*  Local method for validation, set loadingStatus, create kid object, invoke the KidManager post method, and redirect to the full Kid list
     */
     constructNewKid = evt => {
@@ -40,6 +41,7 @@ class KidForm extends Component {
         if (this.state.caregiver === "" || this.state.age === "" || this.state.neighborhoodId === "") {
             window.alert("Please input a caregiver name, child age, and neighborhood");
         } else {
+            
             this.setState({ loadingStatus: true });
             const kid = {
                 caregiver: this.state.caregiver,
@@ -47,20 +49,28 @@ class KidForm extends Component {
                 neighborhoodId: parseInt(this.state.neighborhoodId),
                 served: false
             };
-
-            // Create the child and redirect user to kid list
+            // window.alert("Your meal request has been submitted")
+            // Create the child and redirect user to kid list if logged in.  Otherwise, route to a confirmation page that allows visitor to put in another child or checkout updates
             KidManager.post(kid)
-                .then(() => this.props.history.push("/kids"));
-        }
+                .then(() => {if(this.isAuthenticated()){
+                    this.props.history.push("/kids")
+                    
+                }else{
+                    this.props.history.push("/kids/success")
+                    
+                }})
+            }
     };
+
+   
 
     render() {
 
-        //TODO FIGURE OUT HOW TO GET THE EVENT LISTENER ON THE DROP DOWNS
+        //TODO GET CONFIRMATION MESSAGE IF NOT LOGGED IN AND FORM SUBMIT
 
         return (
             <>
-                <form>
+                <form >
                     <fieldset>
                         <div className="formgrid">
                             <input

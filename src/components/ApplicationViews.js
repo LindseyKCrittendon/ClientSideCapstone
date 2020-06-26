@@ -8,7 +8,8 @@ import KidForm from './kid/KidForm'
 import UpdateForm from './update/UpdateForm'
 import KidEditForm from './kid/KidEditForm'
 import UpdateEditForm from './update/UpdateEditForm'
-import Shack from './Shack'
+import ConfirmationCard from './kid/ConfirmationCard'
+// import Shack from './Shack'
 
 
 
@@ -55,6 +56,11 @@ class ApplicationViews extends Component {
                 <Route path="/kids/:kidId(\d+)/edit" render={props => {
                     return <KidEditForm {...props} />
                 }}/>
+                 <Route
+                    path="/kids/success" render={props => {
+                    return <ConfirmationCard {...props} />
+          }}
+        />
             </React.Fragment>
         )
     }
