@@ -28,8 +28,9 @@ class KidCard extends Component {
   }
           </form>
           {this.props.kid.served ?
-          <button type="button"
-        onClick={() => {this.props.history.push(`/kids/${this.props.kid.id}/edit`)}}>Edit</button>
+        //   <button type="button"
+        // onClick={() => {this.props.history.push(`/kids/${this.props.kid.id}/edit`)}}>Edit</button> CHANGED MIND AND DON'T WANT PEOPLE TO BE ABLE TO GO BACK AND EDIT SERVED CHILDREN FOR REPORTING LATER
+        null
         :
         <>
         <button type="button"
