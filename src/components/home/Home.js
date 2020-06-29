@@ -128,10 +128,10 @@ console.log(a)
   </thead>
   <tbody>
     <tr>
-      <td>#</td>
-      <td>#</td>
-      <td>#</td>
-      <td>#</td>
+      <td>{this.state.kids.filter(kid => kid.age <= 5).length}</td>
+      <td>{this.state.kids.filter(kid => kid.age >= 6 && kid.age <= 10).length}</td>
+      <td>{this.state.kids.filter(kid => kid.age >= 11 && kid.age <= 15).length}</td>
+      <td>{this.state.kids.filter(kid => kid.age >= 16 && kid.age <= 18).length}</td>
     </tr>
   </tbody>
 </Table>
