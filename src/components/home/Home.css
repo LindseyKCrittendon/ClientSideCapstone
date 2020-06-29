@@ -63,7 +63,7 @@
     border: groove 3px #f6e8b1;
     align-items: center;
     padding: 1em;
-    width: 20%;
+    width: 30%;
     margin-top: 5em;
     margin-left: 22em;
     border-radius: 5px;
@@ -78,7 +78,7 @@
   border: groove 3px #f6e8b1;
   align-items: center;
   padding: 1em;
-  width: 30%;
+  width: 40%;
   margin-top: 5em;
   margin-left: 22em;
   border-radius: 5px;
@@ -90,4 +90,8 @@
 th, td{
   padding-left: 1em;
   padding-right: 1em;
+}
+
+.total{
+  font-weight: bold;
 }
