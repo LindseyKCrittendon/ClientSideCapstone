@@ -24,6 +24,9 @@ componentDidMount() {
 }
 
   render() {
+//can test with console logs here but not in return
+var a = new Date("01/01/2020").getMonth()
+console.log(a)
     return (
 <>
 <address className="address">
@@ -57,51 +60,51 @@ componentDidMount() {
   <tbody>
     <tr>
       <td>January</td>
-      <td colSpan="3">{this.state.kids.length}</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 0).length}</td>
     </tr>
     <tr>
       <td>February</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 1).length}</td>
     </tr>
     <tr>
       <td>March</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 2).length}</td>
     </tr>
     <tr>
       <td>April</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 3).length}</td>
     </tr>
     <tr>
       <td>May</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 4).length}</td>
     </tr>
     <tr>
       <td>June</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 5).length}</td>
     </tr>
     <tr>
       <td>July</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 6).length}</td>
     </tr>
     <tr>
       <td>August</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 7).length}</td>
     </tr>
     <tr>
       <td>September</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 8).length}</td>
     </tr>
     <tr>
       <td>October</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 9).length}</td>
     </tr>
     <tr>
       <td>November</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 10).length}</td>
     </tr>
     <tr>
       <td>December</td>
-      <td colSpan="3"># here</td>
+      <td colSpan="3">{this.state.kids.filter(kid => new Date(kid.date).getMonth() === 11).length}</td>
     </tr>
     <tr>
       <td>Total</td>
