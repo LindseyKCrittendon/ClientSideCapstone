@@ -57,3 +57,37 @@
   button:hover {
     background-color: #61210f;
   }
+
+  .report-container{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: groove 3px #f6e8b1;
+    align-items: center;
+    padding: 1em;
+    width: 20%;
+    margin-top: 5em;
+    margin-left: 22em;
+    border-radius: 5px;
+    background-color: #e7c582;
+    color: #4c2719;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.age-container{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: groove 3px #f6e8b1;
+  align-items: center;
+  padding: 1em;
+  width: 30%;
+  margin-top: 5em;
+  margin-left: 22em;
+  border-radius: 5px;
+  background-color: #e7c582;
+  color: #4c2719;
+  text-align: center;
+  flex-wrap: wrap;
+}
+th, td{
+  padding-left: 1em;
+  padding-right: 1em;
+}

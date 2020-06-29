@@ -12,6 +12,7 @@ class KidForm extends Component {
         caregiver: "",
         age: "",
         neighborhoodId: "",
+        date: "",
         neighborhoods: [],
         served: false,
         loadingStatus: false,
@@ -38,7 +39,7 @@ isAuthenticated = () => localStorage.getItem("credentials") !== null
     */
     constructNewKid = evt => {
         evt.preventDefault();
-        if (this.state.caregiver === "" || this.state.age === "" || this.state.neighborhoodId === "") {
+        if (this.state.caregiver === "" || this.state.age === "" || this.state.neighborhoodId === "" || this.state.date === "") {
             window.alert("Please input a caregiver name, child age, and neighborhood");
         } else {
             
@@ -46,6 +47,7 @@ isAuthenticated = () => localStorage.getItem("credentials") !== null
             const kid = {
                 caregiver: this.state.caregiver,
                 age: this.state.age,
+                date: this.state.date,
                 neighborhoodId: parseInt(this.state.neighborhoodId),
                 served: false
             };
@@ -73,6 +75,13 @@ isAuthenticated = () => localStorage.getItem("credentials") !== null
                 <form >
                     <fieldset>
                         <div className="formgrid">
+                        <input
+                        type="date"
+                        required
+                        onChange={this.handleFieldChange}
+                        id="date"
+                        />
+                        <label htmlFor="date">Today's Date</label>
                             <input
                                 type="text"
                                 required

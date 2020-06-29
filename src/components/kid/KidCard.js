@@ -14,6 +14,7 @@ class KidCard extends Component {
           <h3>Caregiver Name: <span className="card-caregiverName">{this.props.kid.caregiver}</span></h3>
           <p>Child Age: {this.props.kid.age}</p>
           <p>Neighborhood: {this.props.kid.neighborhood.name}</p>
+          <p>Date: {this.props.kid.date}</p>
           <form>
             {
               //Tests to see if a child has been served and disables button if so.

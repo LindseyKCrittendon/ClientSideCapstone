@@ -1,10 +1,28 @@
 import React, { Component } from 'react'
 import "./Home.css"
 // import { Link } from 'react-router-dom'
+import Table from 'react-bootstrap/Table'
+import KidManager from '../../modules/KidManager'
 
-
+//TODO:: PRINT REPORTS BY FILTERING AND .LENGTH DATA FROM KIDS ARRAY
 
 class Home extends Component {
+
+  state = {
+    kids: [],
+}
+
+componentDidMount() {
+
+  //getAll from KidManager and hang on to that data; put it in state
+  KidManager.getAll()
+      .then((kids) => {
+          this.setState({
+              kids: kids
+          })
+      })
+}
+
   render() {
     return (
 <>
@@ -26,6 +44,94 @@ class Home extends Component {
 <a className="button" href="https://helpwvkids.org/volunteer-application/" target ="_blank" rel="noopener noreferrer"
       >Volunteer</a>
 </div>
+</div>
+<div className="report-container">
+<h3>Meals Served 2020</h3>
+<Table striped bordered hover size="lg">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th colSpan="3">Meals Served</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td colSpan="3">{this.state.kids.length}</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>March</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>April</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>May</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>June</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>July</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>August</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>September</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>October</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>November</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>December</td>
+      <td colSpan="3"># here</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td colSpan="3">{this.state.kids.length}</td>
+    </tr>
+  </tbody>
+</Table>
+</div>
+
+<div className="age-container">
+  <h3>Children Served by Age</h3>
+  <p>(Years)</p>
+<Table striped bordered hover>
+  <thead>
+    <tr>
+      <th>0 - 5</th>
+      <th>5 - 10 </th>
+      <th>10 - 15</th>
+      <th>15 - 18</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>#</td>
+      <td>#</td>
+      <td>#</td>
+      <td>#</td>
+    </tr>
+  </tbody>
+</Table>
 </div>
 </>
     )

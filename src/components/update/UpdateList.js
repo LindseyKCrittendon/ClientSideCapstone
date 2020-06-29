@@ -4,8 +4,8 @@ import UpdateCard from './UpdateCard'
 import UpdateManager from '../../modules/UpdateManager'
 import './UpdateCard.css'
 
-//TODO:  WORK ON CONDITIONAL RENDERING AFTER LOGIN WORKING, AND ALLOW VISITORS TO SEE UPDATE WITH A DROPDOWN MENU TO VIEW UPDATES BY NEIGHBORHOOD
-//TODO:: UPDATES PRINTING OUT OF ORDER BY DATE.  I WANT NEWEST UPDATE ON TOP.
+
+
 
 class UpdateList extends Component {
     //define what this component needs to render
