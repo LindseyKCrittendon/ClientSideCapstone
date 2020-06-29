@@ -127,14 +127,39 @@ componentDidMount() {
     <tr>
       <th>Ages</th>
       <th>0 - 5</th>
-      <th>5 - 10 </th>
-      <th>10 - 15</th>
-      <th>15 - 18</th>
+      <th>6 - 10 </th>
+      <th>11 - 15</th>
+      <th>16 - 18</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>Meals</td>
+      <td>{this.state.kids.filter(kid => kid.age <= 5 && kid.served === true).length}</td>
+      <td>{this.state.kids.filter(kid => kid.age >= 6 && kid.age <= 10 && kid.served === true).length}</td>
+      <td>{this.state.kids.filter(kid => kid.age >= 11 && kid.age <= 15 && kid.served === true).length}</td>
+      <td>{this.state.kids.filter(kid => kid.age >= 16 && kid.age <= 18 && kid.served === true).length}</td>
+    </tr>
+  </tbody>
+</Table>
+</div>
+
+<div className="age-container">
+  <h3>Meal Request by Age</h3>
+  <p>(Years)</p>
+<Table striped bordered hover>
+  <thead>
+    <tr>
+      <th>Ages</th>
+      <th>0 - 5</th>
+      <th>6 - 10 </th>
+      <th>11 - 15</th>
+      <th>16 - 18</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Requests</td>
       <td>{this.state.kids.filter(kid => kid.age <= 5).length}</td>
       <td>{this.state.kids.filter(kid => kid.age >= 6 && kid.age <= 10).length}</td>
       <td>{this.state.kids.filter(kid => kid.age >= 11 && kid.age <= 15).length}</td>
