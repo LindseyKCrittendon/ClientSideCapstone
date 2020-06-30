@@ -120,7 +120,7 @@ componentDidMount() {
 </div>
 
 <div className="age-container">
-  <h3>Children Served by Age</h3>
+  <h3>Children by Age</h3>
   <p>(Years)</p>
 <Table striped bordered hover>
   <thead>
@@ -140,24 +140,6 @@ componentDidMount() {
       <td>{this.state.kids.filter(kid => kid.age >= 11 && kid.age <= 15 && kid.served === true).length}</td>
       <td>{this.state.kids.filter(kid => kid.age >= 16 && kid.age <= 18 && kid.served === true).length}</td>
     </tr>
-  </tbody>
-</Table>
-</div>
-
-<div className="age-container">
-  <h3>Meal Request by Age</h3>
-  <p>(Years)</p>
-<Table striped bordered hover>
-  <thead>
-    <tr>
-      <th>Ages</th>
-      <th>0 - 5</th>
-      <th>6 - 10 </th>
-      <th>11 - 15</th>
-      <th>16 - 18</th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
       <td>Requests</td>
       <td>{this.state.kids.filter(kid => kid.age <= 5).length}</td>
@@ -168,6 +150,7 @@ componentDidMount() {
   </tbody>
 </Table>
 </div>
+
 <div className="neighborhood-container">
   <h3>Meals by Neighborhood</h3>
 <Table striped bordered hover>
