@@ -12,16 +12,16 @@ class Home extends Component {
   state = {
     kids: [],
     labels: ['January', 'February', 'March',
-    'April', 'May'],
+    'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 datasets: [
 {
-label: 'Rainfall',
+label: 'Meal Requests',
 fill: false,
 lineTension: 0.5,
 backgroundColor: 'rgba(75,192,192,1)',
 borderColor: 'rgba(0,0,0,1)',
 borderWidth: 2,
-data: [65, 59, 80, 81, 56]
+data: []
 }
 ]
 }
@@ -31,8 +31,16 @@ componentDidMount() {
   //getAll from KidManager and hang on to that data; put it in state
   KidManager.getAll()
       .then((kids) => {
+        let data = [];
+        for(let i=0; i<12; i++){
+         const point = kids.filter(kid => new Date(kid.date).getMonth() === i).length
+         data.push(point)
+         console.log(data)
+        }
           this.setState({
-              kids: kids
+              kids: kids,
+              datasets:[{"data": data}]
+          
           })
       })
 }
@@ -200,13 +208,13 @@ componentDidMount() {
 </div>
 
 {/* CHART JS ATTEMPTS */}
-<div>
+<div className="line-graph">
         <Line
           data={this.state}
           options={{
             title:{
               display:true,
-              text:'Average Rainfall per month',
+              text:'Total Meal Requests Per Month',
               fontSize:20
             },
             legend:{

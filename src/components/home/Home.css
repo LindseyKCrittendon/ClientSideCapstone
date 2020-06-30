@@ -112,3 +112,7 @@ th, td{
   flex-direction: column;
   width: 60%;
 }
+
+.line-graph{
+  width: 90%;
+}
