@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import "./Home.css"
 import LineGraph from "../graph/LineGraph"
 import Tables from "../tables/Tables"
+import NeighborhoodBar from '../graph/NeighborhoodBar'
 
 
 //TODO:: UTILIZE CHART.JS TO RENDER DATA INTO GRAPHS
@@ -40,6 +41,7 @@ class Home extends Component {
 
 
       <LineGraph/>
+      <NeighborhoodBar/>
 
 {/* TABLES OF DATA */}
 
