@@ -168,6 +168,39 @@ componentDidMount() {
   </tbody>
 </Table>
 </div>
+<div className="neighborhood-container">
+  <h3>Meals by Neighborhood</h3>
+<Table striped bordered hover>
+  <thead>
+    <tr>
+      <th>Meals</th>
+      <th>Downtown Charleston</th>
+      <th>Switzer Center</th>
+      <th>West Side</th>
+      <th>Kanawha City</th>
+      <th>South Park Village</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Requests</td>
+      <td>{this.state.kids.filter(kid => kid.neighborhoodId === 1).length}</td>
+      <td>{this.state.kids.filter(kid => kid.neighborhoodId === 2).length}</td>
+      <td>{this.state.kids.filter(kid => kid.neighborhoodId === 3).length}</td>
+      <td>{this.state.kids.filter(kid => kid.neighborhoodId === 4).length}</td>
+      <td>{this.state.kids.filter(kid => kid.neighborhoodId === 5).length}</td>
+    </tr>
+    <tr>
+      <td>Served</td>
+      <td>{this.state.kids.filter(kid => kid.neighborhoodId === 1 && kid.served === true).length}</td>
+      <td>{this.state.kids.filter(kid => kid.neighborhoodId === 2 && kid.served === true).length}</td>
+      <td>{this.state.kids.filter(kid => kid.neighborhoodId === 3 && kid.served === true).length}</td>
+      <td>{this.state.kids.filter(kid => kid.neighborhoodId === 4 && kid.served === true).length}</td>
+      <td>{this.state.kids.filter(kid => kid.neighborhoodId === 5 && kid.served === true).length}</td>
+    </tr>
+  </tbody>
+</Table>
+</div>
 </>
     )
   }
