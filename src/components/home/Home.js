@@ -3,13 +3,27 @@ import "./Home.css"
 // import { Link } from 'react-router-dom'
 import Table from 'react-bootstrap/Table'
 import KidManager from '../../modules/KidManager'
+import {Line} from 'react-chartjs-2'
 
-//TODO:: PRINT REPORTS BY FILTERING AND .LENGTH DATA FROM KIDS ARRAY
+//TODO:: UTILIZE CHART.JS TO RENDER DATA INTO GRAPHS
 
 class Home extends Component {
 
   state = {
     kids: [],
+    labels: ['January', 'February', 'March',
+    'April', 'May'],
+datasets: [
+{
+label: 'Rainfall',
+fill: false,
+lineTension: 0.5,
+backgroundColor: 'rgba(75,192,192,1)',
+borderColor: 'rgba(0,0,0,1)',
+borderWidth: 2,
+data: [65, 59, 80, 81, 56]
+}
+]
 }
 
 componentDidMount() {
@@ -134,7 +148,7 @@ componentDidMount() {
   </thead>
   <tbody>
     <tr>
-      <td>Meals</td>
+      <td>Served</td>
       <td>{this.state.kids.filter(kid => kid.age <= 5 && kid.served === true).length}</td>
       <td>{this.state.kids.filter(kid => kid.age >= 6 && kid.age <= 10 && kid.served === true).length}</td>
       <td>{this.state.kids.filter(kid => kid.age >= 11 && kid.age <= 15 && kid.served === true).length}</td>
@@ -184,6 +198,25 @@ componentDidMount() {
   </tbody>
 </Table>
 </div>
+
+{/* CHART JS ATTEMPTS */}
+<div>
+        <Line
+          data={this.state}
+          options={{
+            title:{
+              display:true,
+              text:'Average Rainfall per month',
+              fontSize:20
+            },
+            legend:{
+              display:true,
+              position:'right'
+            }
+          }}
+        />
+      </div>
+
 </>
     )
   }
