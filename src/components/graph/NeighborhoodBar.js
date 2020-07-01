@@ -72,7 +72,7 @@ class NeighborhoodBar extends Component {
                     options={{
                         title: {
                             display: true,
-                            text: 'Meals by Neighborhood',
+                            text: 'Meals and Requests by Neighborhood',
                             fontSize: 20
                         },
                         legend: {

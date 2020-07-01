@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import "./Home.css"
-import LineGraph from "../graph/LineGraph"
-import Tables from "../tables/Tables"
-import NeighborhoodBar from '../graph/NeighborhoodBar'
-import ChildAgePie from '../graph/ChildAgePie'
+// import LineGraph from "../graph/LineGraph"
+// import Tables from "../tables/Tables"
+// import NeighborhoodBar from '../graph/NeighborhoodBar'
+// import ChildAgePie from '../graph/ChildAgePie'
 
 
-//TODO:: UTILIZE CHART.JS TO RENDER DATA INTO GRAPHS
-//TODO:: MOVE INFO TO DIFFERENT COMPONENTS THAT WILL RENDER HERE RATHER THAN HAVE NEVERENDING BLOCKS OF CODE, BECAUSE FUCK.
+//TODO:: WTF IS WRONG WITH THE PIE CHART.  CAN'T FIGURE OUT HOW TO LOOP OVER AGE RANGES WITHOUT BREAKING IT
+//TODO:: MOVE INFO TO DIFFERENT COMPONENTS THAT WILL RENDER HERE RATHER THAN HAVE NEVERENDING BLOCKS OF CODE, BECAUSE FUCK.  
+//TODO:: POSSIBLY SUCK IT UP AND MAKE THE TABLES/GRAPHS/MAP IT'S OWN THING IN THE NAV BAR
+//TODO:: CONDITIONALLY RENDER BETWEEN VISITORS AND USERS, BECAUSE ONLY THE USER SHOULD SEE THE MAP
 
 class Home extends Component {
 
@@ -41,13 +43,13 @@ class Home extends Component {
 {/* CHARTJS GRAPHS */}
 
 
-      <LineGraph/>
+      {/* <LineGraph/>
       <NeighborhoodBar/>
-      <ChildAgePie/>
+      <ChildAgePie/> */}
 
 {/* TABLES OF DATA */}
 
-      <Tables/>
+      {/* <Tables/> */}
 
 </>
     )

@@ -9,6 +9,7 @@ import UpdateForm from './update/UpdateForm'
 import KidEditForm from './kid/KidEditForm'
 import UpdateEditForm from './update/UpdateEditForm'
 import ConfirmationCard from './kid/ConfirmationCard'
+import Stats from './stats/Stats'
 // import Shack from './Shack'
 
 
@@ -34,6 +35,9 @@ class ApplicationViews extends Component {
                         // passing down props from Shack.js to login
                     return <Login handleLoginChange={this.props.handleLoginChange} handleLogoutChange={this.props.handleLogoutChange} {...props} />
                     }
+                }} />
+                 <Route exact path="/stats" render={(props) => {
+                    return <Stats {...props}/>
                 }} />
                 <Route exact path="/updates" render={(props) => {
                     return <UpdateList {...props}/>
