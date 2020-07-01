@@ -13,7 +13,7 @@ class LineGraph extends Component {
                 label: "Meal Requests",
                 fill: true,
                 lineTension: 0.5,
-                backgroundColor: 'rgba(34, 111, 84)',
+                backgroundColor: 'rgba(34, 111, 84, 0.5)',
                 borderColor: 'rgba(0,0,0,1)',
                 borderWidth: 2,
                 data: []
@@ -22,7 +22,7 @@ class LineGraph extends Component {
               label: "Meals Served",
               fill: true,
               lineTension: 0.5,
-              backgroundColor: 'rgba(111, 34, 89)',
+              backgroundColor: 'rgba(111, 34, 89, 0.75)',
               borderColor: 'rgba(0,0,0,1)',
               borderWidth: 2,
               data: []
