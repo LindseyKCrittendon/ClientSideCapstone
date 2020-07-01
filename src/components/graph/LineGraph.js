@@ -11,7 +11,7 @@ class LineGraph extends Component {
         datasets: [
             {
                 label: "Meal Requests",
-                fill: true,
+                fill: false,
                 lineTension: 0.5,
                 backgroundColor: 'rgba(34, 111, 84, 0.5)',
                 borderColor: 'rgba(0,0,0,1)',
