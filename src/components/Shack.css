@@ -1,5 +1,5 @@
 /* Import the google web fonts you want to use */
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Patua+One');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&family=Special+Elite&display=swap');
 
 /*Typography
 --------------------------------------------------------------*/
@@ -9,7 +9,7 @@ input,
 select,
 textarea {
 	color: #4c2719;
-	font-family: 'Comfortaa', Arial, sans-serif;
+	font-family: 'Oxygen', sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
 }
@@ -19,7 +19,7 @@ button{
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Patua One', serif;
+    font-family: 'Oxygen', sans-serif;
   letter-spacing: 2px;
 }
 

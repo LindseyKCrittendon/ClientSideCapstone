@@ -2,12 +2,6 @@ import React, { Component } from 'react'
 import KidCard from './KidCard'
 import KidManager from '../../modules/KidManager'
 
-
-
-
-
-
-
 class KidList extends Component {
     //define what this component needs to render
     // added another property to state to allow me to test with a conditional and render a different state.

@@ -31,6 +31,7 @@ class NavBar extends Component {
           :
           <li className="nav-link tab" onClick={() => {this.props.handleLogoutChange()}}><Link to="/login">Logout</Link></li>
             }
+            <li><Link className="nav-link tab" to="/stats">Stats</Link></li>
             <li><Link className="nav-link tab" to="/updates">Updates</Link></li>
             <li><Link className="nav-link tab" to="/kids">Meal Requests</Link></li>
           </ul>
