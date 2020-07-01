@@ -3,6 +3,7 @@ import "./Home.css"
 import LineGraph from "../graph/LineGraph"
 import Tables from "../tables/Tables"
 import NeighborhoodBar from '../graph/NeighborhoodBar'
+import ChildAgePie from '../graph/ChildAgePie'
 
 
 //TODO:: UTILIZE CHART.JS TO RENDER DATA INTO GRAPHS
@@ -42,6 +43,7 @@ class Home extends Component {
 
       <LineGraph/>
       <NeighborhoodBar/>
+      <ChildAgePie/>
 
 {/* TABLES OF DATA */}
 

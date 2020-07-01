@@ -13,10 +13,19 @@ class LineGraph extends Component {
                 label: "Meal Requests",
                 fill: true,
                 lineTension: 0.5,
-                backgroundColor: 'rgba(75,192,192,1)',
+                backgroundColor: 'rgba(34, 111, 84)',
                 borderColor: 'rgba(0,0,0,1)',
                 borderWidth: 2,
                 data: []
+            },
+            {
+              label: "Meals Served",
+              fill: true,
+              lineTension: 0.5,
+              backgroundColor: 'rgba(111, 34, 89)',
+              borderColor: 'rgba(0,0,0,1)',
+              borderWidth: 2,
+              data: []
             }
         ]
     }
@@ -31,7 +40,6 @@ class LineGraph extends Component {
               for(let i=0; i<12; i++){
                const point = kids.filter(kid => new Date(kid.date).getMonth() === i).length
                data.push(point)
-              
               }
               let copyOfDataSets = this.state.datasets
               copyOfDataSets[0].data = data
@@ -40,8 +48,21 @@ class LineGraph extends Component {
                     datasets: copyOfDataSets
                 
                 })
+            }) 
+            KidManager.getAllServed()
+            .then((kids) => {
+              let data = [];
+              for(let i=0; i<12; i++){
+                const point = kids.filter(kid => new Date(kid.date).getMonth() === i).length
+                data.push(point)
+            }
+            let copyOfDataSets = this.state.datasets
+            copyOfDataSets[1].data = data
+            this.setState({
+              datasets: copyOfDataSets
             })
-      }
+            })
+          }
 
 render () {
 

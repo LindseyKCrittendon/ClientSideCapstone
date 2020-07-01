@@ -1,19 +1,31 @@
+
+// import KidManager from '../../modules/KidManager'
 import React, { Component } from 'react'
-import {Bar} from 'react-chartjs-2';
+import {Pie} from 'react-chartjs-2';
 import KidManager from '../../modules/KidManager'
 
+//TODO:: FIGURE OUT HOW TO RUN LOOP THROUGH SEVERAL CONDITIONS TO DISPLAY DATA BY AGE RANGE
 
+class ChildAgePie extends Component {
 
-class NeighborhoodBar extends Component {
-        state = {
-  labels: ['Downtown Charleston', 'Switzer Center', 'West Side',
-           'Kanawha City', 'South Park Village'],
+state = {
+  labels: ['0-5', '6-10', '11-15',
+           '16-18'],
   datasets: [
     {
       label: 'Meals Requested',
-      backgroundColor: 'rgba(34, 111, 84)',
-      borderColor: 'rgba(0,0,0,1)',
-      borderWidth: 2,
+      backgroundColor: [
+        '#B21F00',
+        '#C9DE00',
+        '#2FDE00',
+        '#00A6B4'
+      ],
+      hoverBackgroundColor: [
+      '#501800',
+      '#4B5000',
+      '#175000',
+      '#003350'
+      ],
       data: []
     }
   ]
@@ -26,11 +38,15 @@ componentDidMount() {
     KidManager.getAll()
         .then((kids) => {
           let data = [];
-          for(let i=1; i< 10; i++){
-           const point = kids.filter(kid => kid.neighborhoodId === i).length
-           data.push(point)
-          
+          for(let i=1; i< 1000; i++){
+           const point1 = kids.filter(kid => kid.age <= 5).length
+           data.push(point1)
           }
+          for(let i=1; i< 1000; i++){
+            const point2 = kids.filter(kid => kid.age >= 6 && kid.age <= 10).length
+            data.push(point2)
+           }
+          
           let copyOfDataSets = this.state.datasets
           copyOfDataSets[0].data = data
           console.log(copyOfDataSets)
@@ -42,15 +58,17 @@ componentDidMount() {
   }
 
 
+
+
   render() {
     return (
       <div>
-        <Bar
+        <Pie
           data={this.state}
           options={{
             title:{
               display:true,
-              text:'Meals by Neighborhood',
+              text:'Meals by Age Group (years)',
               fontSize:20
             },
             legend:{
@@ -64,4 +82,4 @@ componentDidMount() {
   }
 }
 
-export default NeighborhoodBar
+export default ChildAgePie

@@ -41,5 +41,8 @@ update(editedKid) {
            },
            body: JSON.stringify({ served: true })
        }).then(r => r.json())
-   }
+   },
+   getAllServed() {
+    return fetch(`${remoteURL}/kids?_expand=neighborhood&served=true`).then(result => result.json())
+  }
 }

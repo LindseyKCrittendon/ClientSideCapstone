@@ -125,7 +125,7 @@
       "caregiver": "Barney",
       "age": "5",
       "neighborhoodId": 3,
-      "served": false,
+      "served": true,
       "id": 11,
       "date": "06/29/2020"
     },
@@ -176,6 +176,14 @@
       "neighborhoodId": 1,
       "served": false,
       "id": 17
+    },
+    {
+      "caregiver": "testing bar",
+      "age": "1",
+      "date": "2020-06-30",
+      "neighborhoodId": 1,
+      "served": false,
+      "id": 18
     }
   ]
 }
