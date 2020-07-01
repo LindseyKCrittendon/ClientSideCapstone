@@ -1,12 +1,10 @@
-
-// import KidManager from '../../modules/KidManager'
 import React, { Component } from 'react'
 import { Pie } from 'react-chartjs-2';
 import KidManager from '../../modules/KidManager'
 
 //TODO:: FIGURE OUT HOW TO RUN LOOP THROUGH SEVERAL CONDITIONS TO DISPLAY DATA BY AGE RANGE
 
-class ChildAgePie extends Component {
+class ChildAgePie2 extends Component {
 
     state = {
         labels: ['Age 0-5', 'Age 6-10', 'Age 11-15',
@@ -35,7 +33,7 @@ class ChildAgePie extends Component {
 
         //getAll from KidManager and hang on to that data; put it in state
         //FOR LOOP HELPS PUSH INFO INTO DATA(STATE) TO PLOT POINTS THAT UPDATE AUTOMAGICALLY IN LINE GRAPH FOR MEAL REQUESTS
-        KidManager.getAll()
+        KidManager.getAllServed()
             .then((kids) => {
                 let data = [];
 
@@ -72,7 +70,7 @@ class ChildAgePie extends Component {
                     options={{
                         title: {
                             display: true,
-                            text: 'Meal Requests by Age Group (years)',
+                            text: 'Meals Served by Age Group (years)',
                             fontSize: 20
                         },
                         legend: {
@@ -86,4 +84,4 @@ class ChildAgePie extends Component {
     }
 }
 
-export default ChildAgePie
+export default ChildAgePie2
