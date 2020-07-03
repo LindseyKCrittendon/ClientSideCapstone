@@ -10,7 +10,7 @@
   "updates": [
     {
       "id": 1,
-      "message": "We're bringing you VEGGIES - parse?",
+      "message": "We're bringing you VEGGIES from the farmer's market today, so be prepared for tons of fresh produce!",
       "date": "2020-06-27",
       "neighborhoodId": 3
     },
@@ -29,13 +29,6 @@
       "id": 3
     },
     {
-      "date": "2020-06-26",
-      "message": "trying to remove form controlId error in console",
-      "neighborhoodId": 4,
-      "truckId": 1,
-      "id": 4
-    },
-    {
       "date": "2020-06-28",
       "message": "We will be in at the New Life Church parking lot from 3-5pm serving spaghetti and garlic bread on 06/21/20",
       "neighborhoodId": 4,
@@ -44,7 +37,7 @@
     },
     {
       "id": 7,
-      "message": "We will be here at 1:30 today serving fruit and vegetables",
+      "message": "We will be here at 1:30 today serving fruit and vegetables at Freewill Baptist Church parking lot",
       "date": "2020-07-02",
       "neighborhoodId": 1
     }
@@ -167,6 +160,22 @@
       "neighborhoodId": 4,
       "served": false,
       "id": 12
+    },
+    {
+      "caregiver": "Michael Myers",
+      "age": "6",
+      "date": "2020-08-28",
+      "neighborhoodId": 5,
+      "served": false,
+      "id": 13
+    },
+    {
+      "caregiver": "Joe Exotic",
+      "age": "16",
+      "date": "2020-03-16",
+      "neighborhoodId": 2,
+      "served": false,
+      "id": 14
     }
   ]
 }
