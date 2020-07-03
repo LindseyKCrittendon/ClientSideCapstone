@@ -83,7 +83,11 @@ class UpdateEditForm extends Component {
                                 id="neighborhoodId">
                                 {/* try onchange where select is */}
                                 {this.state.neighborhoods.map(neighborhood =>
-                                <option value={neighborhood.id}>{neighborhood.name}</option>
+                                  neighborhood.id === this.state.neighborhoodId ?
+                                  <option value={neighborhood.id} selected="true">{neighborhood.name}</option>
+                                  :
+            
+                                  <option value={neighborhood.id}>{neighborhood.name}</option>
                                  )}
                                 </Form.Control>
                             </Form.Group>
