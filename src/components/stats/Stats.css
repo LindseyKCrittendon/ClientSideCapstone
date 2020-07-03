@@ -7,3 +7,15 @@
     margin-top: 5em;
     margin-left: 2em;
 }
+
+.report-container{
+    margin-top: 5em;
+    flex-wrap: wrap;
+    margin-left: 65%;
+
+}
+
+.age-container{
+   margin-top: -35%;
+   margin-left: 10em;
+}
