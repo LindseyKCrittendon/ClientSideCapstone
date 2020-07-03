@@ -34,4 +34,10 @@
   .card button:hover {
     background-color: #61210f;
   }
+
+  .confirmation-card{
+    align-content: center;
+    margin-top: 5em;
+    margin-left: 35%;
+  }
   

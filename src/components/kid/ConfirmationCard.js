@@ -6,8 +6,10 @@ import "./Kid.css"
 class ConfirmationCard extends Component {
     render() {
         return (
+            <div className="confirmation-card">
             <div className="card">
                 <div className="card-content">
+                    
 
                     <h3>Thank You!</h3>
                     <p>Your meal request has been received.</p>
@@ -23,7 +25,7 @@ class ConfirmationCard extends Component {
                         View Updates
                     </button>
 
-
+                    </div>
                 </div>
             </div>
         );
