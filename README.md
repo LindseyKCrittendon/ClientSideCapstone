@@ -22,6 +22,10 @@ This front end project was created for The Underprivileged Children Foundation a
 ### Meal Request Form
 ![image](https://user-images.githubusercontent.com/62181538/90637093-8a342180-e1f9-11ea-964e-2e31d542efd2.png)
 
+### Meal Request Page
+This page is only available to users for the application and not accessible to visitors requesting meals.  This page allows the users to view the number of meal requests by neighborhood along with the request details.  The user can then mark the meals as served, removing them from view.
+![image](https://user-images.githubusercontent.com/62181538/90637199-b485df00-e1f9-11ea-8d4b-d224cc3af9ec.png)
+
 
 
 
