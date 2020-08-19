@@ -2,7 +2,12 @@
 This front end project was created for The Underprivileged Children Foundation as a means to track meal requests from visitors, mark them as served, send updates to the people requesting meals, and showcase the meal requests vs. served meals.  This application is called SHACK - Stopping Hunger Among Community Kids after the foundation's program aimed at serving local children free meals upon request.  The project was built with users and visitors in mind, as it removes all of the guess work of creating, reading, updating, and deleting updates and meal requests to allow the foundation to serve as many local children as possible by knowing the location and demand.  The goal was to create an application anyone can use that reduces waste while also displaying the results of donations to past, present, and future benefactors for the foundation.
 
 ## UI
+Home Page
 ![image](https://user-images.githubusercontent.com/62181538/90636035-075e9700-e1f8-11ea-92ef-751cfed33443.png)
+
+Stats Page
+![image](https://user-images.githubusercontent.com/62181538/90636174-3bd25300-e1f8-11ea-96a8-5cc82edc6c42.png)
+
 
 
 
