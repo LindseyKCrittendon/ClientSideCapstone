@@ -1,5 +1,5 @@
-## Introduction
-This front end project was created for The Underprivileged Children Foundation as a means to track meal requests from visitors, mark them as served, send updates to the people requesting meals, and showcase the meal requests vs. served meals.  This application is called SHACK - Stopping Hunger Among Community Kids after the foundation's program aimed at serving local children free meals upon request.  The project was built with users and visitors in mind, as it removes all of the guess work of creating, reading, updating, and deleting updates and meal requests to allow the foundation to serve as many local children as possible by knowing the location and demand.  The goal was to create an application anyone can use that reduces waste while also displaying the results of donations to past, present, and future benefactors for the foundation.
+## S.H.A.C.K. - Stopping Hunger Among Community Kids
+This front end project was created for The Underprivileged Children Foundation as a means to track meal requests from visitors, mark them as served, send updates to the people requesting meals, and showcase the meal requests vs. served meals.  This application is called SHACK - Stopping Hunger Among Community Kids after the foundation's program aimed at serving local children free meals upon request.  The project was built with users and visitors in mind, as it removes all of the guess work of creating, reading, updating, and deleting updates and meal requests to allow the foundation to serve as many local children as possible by knowing the location and demand.  The goal was to create an application anyone can use that reduces waste while also displaying the results of donations to past, present, and future benefactors for the foundation.  This app is built with React.js, JavaScript, CSS, and Bootstrap.
 
 ## Preview
 ### Home Page
@@ -31,17 +31,9 @@ This page is only available to users for the application and not accessible to v
 ![image](https://user-images.githubusercontent.com/62181538/90637199-b485df00-e1f9-11ea-8d4b-d224cc3af9ec.png)
 
 
+## Installation and Setup Instructions
 
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
-
-
-## Available Scripts
-
-In the project directory, you can run:
+Clone Down this repository.  You will need node and npm installed globally on your machine.
 
 ### `npm start`
 
