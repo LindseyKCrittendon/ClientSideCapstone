@@ -8,6 +8,8 @@ Home Page
 Stats Page
 ![image](https://user-images.githubusercontent.com/62181538/90636174-3bd25300-e1f8-11ea-96a8-5cc82edc6c42.png)
 
+![image](https://user-images.githubusercontent.com/62181538/90636351-789e4a00-e1f8-11ea-95a8-0f7270ec8166.png)
+
 
 
 
