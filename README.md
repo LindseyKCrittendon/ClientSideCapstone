@@ -3,9 +3,11 @@ This front end project was created for The Underprivileged Children Foundation a
 
 ## Preview
 ### Home Page
+This page gives a brief overview of the purpose of the application.  The Home page will also lead visitors to the foundation's website.
 ![image](https://user-images.githubusercontent.com/62181538/90636035-075e9700-e1f8-11ea-92ef-751cfed33443.png)
 
 ### Stats Page
+This displays meals served vs. meal requests by age, neighborhood, and month in various formats.
 ![image](https://user-images.githubusercontent.com/62181538/90636174-3bd25300-e1f8-11ea-96a8-5cc82edc6c42.png)
 
 ![image](https://user-images.githubusercontent.com/62181538/90636351-789e4a00-e1f8-11ea-95a8-0f7270ec8166.png)
@@ -17,9 +19,11 @@ This front end project was created for The Underprivileged Children Foundation a
 ![image](https://user-images.githubusercontent.com/62181538/90636701-011cea80-e1f9-11ea-9d8c-2dec4ed6a4ff.png)
 
 ### Updates Page
+These updates can only be created, edited, and deleted by actual users, but they can be displayed to all visitors allowing them to know when their food truck will arrive in their neighborhood along with a menu.
 ![image](https://user-images.githubusercontent.com/62181538/90636960-5d800a00-e1f9-11ea-936c-9683e0d546c5.png)
 
 ### Meal Request Form
+This is a simple form for visitors to fill out to request a meal.  Upon submission, the visitor is lead to a confirmation page that will give him or her the option to view updates or submit another meal request.  Visitors to the website cannot perform CRUD tasks on meal requests or view meal requests from other visitors.
 ![image](https://user-images.githubusercontent.com/62181538/90637093-8a342180-e1f9-11ea-964e-2e31d542efd2.png)
 
 ### Meal Request Page
