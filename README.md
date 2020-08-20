@@ -1,5 +1,5 @@
 ## S.H.A.C.K. - Stopping Hunger Among Community Kids
-This front end project was created for The Underprivileged Children Foundation as a means to track meal requests from visitors, mark them as served, send updates to the people requesting meals, and showcase the meal requests vs. served meals.  This application is called SHACK - Stopping Hunger Among Community Kids after the foundation's program aimed at serving local children free meals upon request.  The project was built with users and visitors in mind, as it removes all of the guess work of creating, reading, updating, and deleting updates and meal requests to allow the foundation to serve as many local children as possible by knowing the location and demand.  The goal was to create an application anyone can use that reduces waste while also displaying the results of donations to past, present, and future benefactors for the foundation.  This app is built with React.js, JavaScript, CSS, and Bootstrap.
+  An application used to track requested meals and served meals for The Underprivileged Children Foundation built with React.js, JavaScript, CSS, and Bootstrap.
 
 ## Preview
 ### Home Page
@@ -42,34 +42,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 To run with the seed data `json-server -w shack.json -p 8000`.
 
+This app utilizes chartjs which can be intalled by `npm install react-chartjs-2`.
 
 
-## Learn More
+## Reflection
+This front-end project was created for The Underprivileged Children Foundation as a means to track meal requests from visitors, mark them as served, send updates to the people requesting meals, and showcase the meal requests vs. served meals.  This project was built as part of a front-end capstone project for NewForce, and I saw an opportunity to solve a real-world problem with React. It was built in a two-week sprint. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application was built with users and visitors in mind, as it removes all of the guess work of creating, reading, updating, and deleting updates and meal requests to allow the foundation to serve as many local children as possible by knowing the location and demand.  The goal was to create an application anyone can use that reduces waste while also displaying the results of donations to past, present, and future benefactors for the foundation.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The most challenging part of the application was finding a way for the meal requests, meals served, and demographics to display in charts and graphs automatically, so information could display in real time with every new request and served meal by pushing the received data into state.  Each new meal, child, neighborhood, and served meal instantly updates the charts, graphs, and tables.  
 
-### Code Splitting
+It was also challenging to conditionally render every aspect of the app, as I wanted to differentiate between visitors and actual users of the application.  Every page conditionally renders information depending on whether or not the user is logged in.  This allows visitors to view stats, updates, and place meal requests.  The visitor receives a confirmation message in return along with a limited number of options to guide the user through the website.  The user can perform CRUD on all information entered into the database aside from served meals to ensure accurate reporting.  Users can mark meal requests as individually served and toggle between requested and served meals.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
